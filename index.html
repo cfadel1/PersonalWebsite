@@ -299,12 +299,18 @@
             </div>
         </article>
         <aside>
-            <form action="mail_contact.php" method="post">
-                First Name: <input type="text" name="first_name"><br>
-                Last Name: <input type="text" name="last_name"><br>
-                Email: <input type="text" name="email"><br>
-                Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>
-                <input type="submit" name="submit" value="Submit">
+            <form class="contact_form" method="post" action="http://formspree.io/cedricfadel@hotmail.com">
+                <div>
+                    <input class="input" name="name" type="text" aria-required="true" placeholder="Name">
+                </div>
+                <div>
+                    <input class="input" name="_replyto" type="email" aria-required="true" placeholder="E-mail">
+                </div>
+                <div class="container_textarea">
+                    <textarea name="body" type="text" aria-required="true" placeholder="Message"></textarea>
+                </div>
+                <input class="submit" type="submit" value="Submit" onclick="SubmitFormData();">
+                <p class="container_response" id="response"></p>
             </form>
         </aside>
     </section>
