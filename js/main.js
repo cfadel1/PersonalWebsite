@@ -1,7 +1,8 @@
-//change this shit to window and not document 
-$(document).ready(function () {
+$(window).load(function () {
     $('.loader').fadeOut(5000, "swing");
+});
 
+$(document).ready(function () {
     $(document).ready(function () {
         $('a[href^="#"]').on('click', function (e) {
             e.preventDefault();
