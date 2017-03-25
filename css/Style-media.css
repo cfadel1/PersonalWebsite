@@ -1,0 +1,47 @@
+/*-------------Media!!!----------*/
+@media screen and (max-width: 478px) {
+    body {
+        position: absolute;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h2 {
+        font-size: 150%;
+    }
+
+    h3 {
+        font-size: 125%;
+    }
+
+    p {
+        font-size: 120%;
+    }
+
+    header {
+        position: absolute;
+    }
+
+    #logo {
+        margin: 15% 0 20px -25px;
+        background: url(img/RD_mobile.png) no-repeat center;
+    }
+
+    #menu-icon {
+        display: inline-block;
+    }
+
+    section {
+        display: block !important;
+    }
+
+    article {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    aside {
+        display: block !important;
+        width: 100% !important;
+    }
+}
