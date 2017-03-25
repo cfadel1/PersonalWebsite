@@ -1,5 +1,5 @@
-$(window).load(function () {
-    $('.loader').fadeOut(5000, "swing");
+$(window).on('load', function () {
+    $('.loader').fadeOut();
 });
 
 $(document).ready(function () {
