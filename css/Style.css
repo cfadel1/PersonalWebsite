@@ -5,37 +5,30 @@
     padding: 0;
 }
 
-body {
-    background-color: #f2f2f2;
-    font-family: 'Alegreya', serif, Arial, San-Serif;
-    margin: 0;
-    padding: 2% 10%;
-}
-
-section {
-    background-color: #e1e1e1;
-    box-shadow: 6px 6px 5px #bfbfbf;
-}
-
 img {
-    text-align: center;
     height: 100%;
     width: 100%;
 }
 
-h1 {
-    text-align: center;
-    font-size: 180%;
-    line-height: 120%;
-    padding: 5% 0%;
-}
-
-h2 {
-    font-size: 2.5vw;
-}
-
+/*Footer*/
 footer {
     color: #002a5c;
+    width: 100%;
+    overflow: hidden;
+    opacity: 0.90;
+}
+
+    footer div p {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+.copyright {
+    border-top: 1px solid #4D4E50;
+    background-color: #002a5c;
+    max-height: 50px;
+    text-align: center;
+    opacity: 0.95;
 }
 
 /*Links*/
@@ -50,20 +43,120 @@ a {
         text-decoration: underline;
     }
 
-/*titles*/
-.title {
-    border-bottom: double;
-    background-color: #002a5c;
-    color: white;
-    padding: 1.25% 0 1.25% 0;
+/*Page Banner*/
+.index-banner {
+    width: 100%;
+    height: 50vh;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 2;
+    background-position: 50% 50%;
+}
+
+.about-me-banner {
+    background-size: cover;
+}
+
+.portfolio-banner {
+    background-size: 201vh 26vw;
+}
+
+.index-banner-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+}
+
+.index-banner-text-wrapper {
+    position: relative;
+    top: 35%;
     text-align: center;
+    z-index: 20;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.portfolio-banner-text-wrapper{
+    position: relative;
+    top: 57%;
+    text-align: center;
+    z-index: 20;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.index-banner-title {
+    font: 4.5em 'Alegreya', serif;
+    font-weight: 600;
+    margin-top: 0px;
+    color: #002a5c;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 43%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.portfolio-title{
+    font: 4.5em 'Alegreya', serif;
+    font-weight: 600;
+    margin-top: 0px;
+    color: #ffffff;
+    letter-spacing: 60px;
+    text-transform: uppercase;
+    text-align: center;}
+
+.banner-icon-wrapper {
+    position: relative;
+    margin-bottom: 3vw;
+    z-index: 25;
+}
+
+.center-margin, .width-75, .content-wrapper, .banner-icon {
+    margin-left: auto;
+    margin-right: auto;
     display: block;
 }
 
-.sub-title {
+.banner-icon {
+    width: 220px;
+    height: 220px;
+    margin-top: -110px;
+    background-image: url(img/Me.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: -40px;
+    border-radius: 250px;
+    border: 3px solid rgba(255, 237, 237, 0.54);
+    box-shadow: 3px 3px 13px 5px rgba(37, 37, 37, 0.35);
+}
+
+.about-page-wrapper {
+    background-color: #2f2f2f;
+    color: #cccbcb;
+}
+
+.under-construction{
+    font: 3.5em 'Alegreya', serif;
     text-align: center;
-    display: block;
+}
+
+/*titles*/
+.title {
+    border-bottom: double;
+    border-bottom-color: #002a5c;
     color: #002a5c;
+    padding: 1.25% 0 1.25% 0;
+    display: block;
+    text-align: left;
+}
+
+.sub-title {
+    font-size: 1.2em;
+    text-align: center;
 }
 
 /*Navigation*/
@@ -81,10 +174,10 @@ header {
         opacity: 1.00;
     }
 
-    .nav-active{
-        opacity: 1.00;
-        background: #001733;
-    }
+.nav-active {
+    opacity: 1.00;
+    background: #001733;
+}
 
 nav ul li {
     display: inline-block;
@@ -92,15 +185,15 @@ nav ul li {
     float: left;
     text-align: center;
     width: 20%;
-    line-height: 2.5vw;
-    font-size: 1.5vw;
+    line-height: 45px;
+    font-size: 20px;
 }
 
 nav li:hover {
     background: #001733;
 }
 
-.nav-active a{
+.nav-active a {
     color: #ffffff;
 }
 
@@ -124,217 +217,160 @@ nav li:hover {
     height: 10px;
 }
 
-/*About Me*/
-.about-me {
-    display: inline-flex;
-    width: 100%;
-    background-color: #002a5c;
+.outer-box {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
     opacity: 0.95;
-    font: 1.8vw 'Alegreya', serif;
+    font: 1.5em 'Alegreya', serif;
     color: #ffffff;
 }
 
-    .about-me article {
-        margin: 3% 0 3% 3%;
-        width: 40%;
-        height: auto;
+.inner-box {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    opacity: 0.95;
+    font: 1.5em 'Alegreya', serif;
+    color: #002a5c;
+    text-align: justify;
+}
+
+/*About Me*/
+
+.about-me div ul {
+    display: inline-block;
+    list-style: none;
+    width: 100%;
+    margin: 0 auto;
+}
+
+    .about-me div ul li {
+        display: inline-block;
     }
 
-    .about-me aside {
-        float: left;
-        margin: 30px 30px;
-        width: 60%;
-        height: auto;
-        align-items: center;
-        text-align: justify;
-        justify-content: center;
-    }
+/*Skills and Tools*/
+.skills-and-tools {
+    padding: 0 0 0 0;
+    text-align: center;
+}
 
-        .about-me aside h2 {
-            border-bottom: double;
-            border-bottom-color: #ffffff;
-            text-align: left;
-        }
+.skills_and_tools i {
+    font: 1.5em 'Gidugu', serif;
+}
 
-        .about-me aside div ul {
-            display: inline-block;
-            list-style: none;
-            width: 100%;
-            margin: 0 auto;
-        }
+figure {
+    margin: 2% 2% 1% 2%;
+    display: inline-block;
+    font-size: 2.5em;
+    /*color: #000000;*/
+}
 
-            .about-me aside div ul li {
-                display: inline-block;
-            }
+figcaption {
+    margin-top: -15%;
+    font-size: 0.3em;
+}
 
 /*Projects*/
-.projects {
-    width: 100%;
-}
-
-    .projects section {
-        display: inline-flex;
-        width: 100%;
-        color: #002a5c;
-    }
-
 .project {
-    min-height: 25vw;
+    display: inline-block;
 }
 
-    .project article {
-        margin: 3% 3% 3% 3%;
-        width: 50%;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        flex-direction: column;
-        -webkit-box-align: start;
-        align-items: flex-start;
-        -webkit-box-pack: center;
-        justify-content: center;
-        color: #002a5c;
+.project-description-box {
+    display: inline-block;
+    flex-direction: column;
+    width: 50%;
+    color: #002a5c;
+}
+
+    .project-description-box ul li {
+        list-style-type: none;
+        display: inline-block;
     }
 
-        .project article ul li {
-            list-style-type: none;
-            display: inline-block;
-        }
+.project-image-box {
+    float: left;
+    display: inline-block;
+    text-align: center;
+    width: 50%;
+}
 
-    .project aside {
-        float: left;
-        width: 53.19%;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        flex-direction: column;
-        -webkit-box-align: start;
-        align-items: flex-start;
-        -webkit-box-pack: center;
-        justify-content: center;
-    }
-
-    .project p{
-        font-size: 1.5vw;
+.project p {
+    font-size: 0.8em;
         text-align: justify;
-    }
+}
 
-.project-title h2{
+.left-pos-box {
+    float: left;
+}
+
+.right-pos-box {
+    float: right;
+}
+
+.project-title h2 {
     display: inline-block;
     cursor: pointer;
-    font-size: 2.3vw;
+    font-size: 1.2em;
 }
 
-    .project-title:hover {
-        color: black;
-    }
+.project-title:hover {
+    color: black;
+}
 
 .project-link {
     display: inline-block;
-    font-size: 1.7vw;
+    font-size: 1em;
 }
 
     .project-link li .fa-github:hover {
         background-color: transparent;
     }
 
-/*Skills and Tools*/
-.skills_and_tools {
-    text-align: center;
-    display: block;
-    color: #333333;
-}
 
-    .skills_and_tools article {
-        font: 1.5em 'Gidugu', serif;
-        padding: 0 0 0 0;
-    }
-
-    .skills_and_tools i {
-        font-size: 4.5vw;
-    }
-
-figure {
-    margin: 2% 2% 1% 2%;
-    display: inline-block;
-    text-align: center;
-}
-
-figcaption {
-    margin-top: -15%;
-    font-size: 2.7vw;
-}
 
 /*Contact Form*/
 .contact {
-    display: flex;
     color: #002a5c;
 }
 
-.contact p{
-    font: 1.8vw 'Alegreya', serif;
-    text-align: justify;
-}
-
-    .contact article {
-        width: 50%;
-        margin: 3% 0 3% 3%;
+    .contact p {
+        font: 1.8vw 'Alegreya', serif;
+        text-align: justify;
     }
 
-        .contact article ul {
-            display: inline-block;
-            text-align: center;
-            list-style: none;
-            width: 100%;
-            margin: 0 auto;
-        }
 
-            .contact article ul li {
-                display: inline-block;
-                font-size: 27px;
-            }
-
-    .contact aside {
-        width: 50%;
-        margin: 0 3% 0 3%;
+    .contact ul {
+        display: inline-block;
+        text-align: center;
+        list-style: none;
+        width: 100%;
+        margin: 0 auto;
     }
 
-.contact_form {
-    align-items: center;
-    flex-direction: column;
-    margin: 3% 0 3% 3%;
-    box-sizing: border-box;
-    max-width: 100%;
-    min-width: 100%;
-}
+    .contact li {
+        display: inline-block;
+        font-size: 27px;
+    }
 
-.contact div {
+.contact-form .input {
     width: 100%;
-    box-sizing: content-box;
-    padding: 3% 0;
-}
-
-.contact .input {
-    width: 100%;
-    font-size: 1.6vw;
+    font-size: 0.65em;
     border-bottom: 1px solid #002a5c;
     background: none;
     color: #002a5c;
-    border-radius: 0;
-    box-sizing: border-box;
-    padding: 5px 0;
 }
 
-.contact_form textarea {
-    min-width: 100%;
-    max-width: 100%;
-    font-size: 1.6vw;
+.contact-form textarea {
+    width: 100%;
+    font-size: 0.65em;
     border-bottom: 1px solid #002a5c;
     background: none;
     color: #002a5c;
     overflow: auto;
 }
-
 
 *::-webkit-input-placeholder {
     color: #002a5c;
@@ -353,12 +389,11 @@ figcaption {
 }
 
 .submit {
-    font-size: 1.8vw;
+    font-size: 0.6em;
     float: right;
-    margin: 1% 0 4% 3%;
     color: #e1e1e1;
     background-color: #002a5c;
-    padding: 2% 4%;
+    padding: 1% 3%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -367,7 +402,7 @@ figcaption {
 
 /*Social Icons*/
 .social-icon-header {
-    color: #ffffff;
+    color: #002a5c;
     font-size: 1.8vw;
 }
 
