@@ -15,5 +15,18 @@ $(document).ready(function () {
             });
         });
     });
-    $('textarea').autoResize();
+
+    //$("#first_name").on("focusin", function () {
+    //    $('#first_name').addClass('fieldClicked');
+    //});
+
+    //$("#last_name").on("focusin", function () {
+    //    $('#first_name').addClass('fieldClicked');
+    //});
+    //$("#email").on("focusin", function () {
+    //    $('#first_name').addClass('fieldClicked');
+    //});
+    //$("#message").on("focusin", function () {
+    //    $('#first_name').addClass('fieldClicked');
+    //});
 });

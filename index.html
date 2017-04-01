@@ -158,16 +158,16 @@
                     <div class="contact-form">
                         <form method="post" action="http://formspree.io/cedricfadel@hotmail.com">
                             <div>
-                                <input class="input" name="fist_name" type="text" aria-required="true" placeholder="First Name">
+                                <input class="input" id="first_name" name="fist_name" type="text" aria-required="true" placeholder="First Name">
                             </div>
                             <div>
-                                <input class="input" name="last_name" type="text" aria-required="true" placeholder="Last Name">
+                                <input class="input" id="last_name" name="last_name" type="text" aria-required="true" placeholder="Last Name">
                             </div>
                             <div>
-                                <input class="input" name="_replyto" type="email" aria-required="true" placeholder="E-mail">
+                                <input class="input" id="email" name="_replyto" type="email" aria-required="true" placeholder="E-mail">
                             </div>
-                            <div>
-                                <textarea name="body" type="text" aria-required="true" placeholder="Message"></textarea>
+                            <div class="contact-textarea">
+                                <textarea name="body" id="message" type="text" aria-required="true" placeholder="Message"></textarea>
                             </div>
                             <div>
                                 <input class="submit" type="submit" value="Submit" onclick="SubmitFormData();">
