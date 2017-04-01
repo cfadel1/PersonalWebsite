@@ -10,27 +10,6 @@ img {
     width: 100%;
 }
 
-/*Footer*/
-footer {
-    color: #002a5c;
-    width: 100%;
-    overflow: hidden;
-    opacity: 0.90;
-}
-
-    footer div p {
-        color: #ffffff;
-        text-decoration: none;
-    }
-
-.copyright {
-    border-top: 1px solid #4D4E50;
-    background-color: #002a5c;
-    max-height: 50px;
-    text-align: center;
-    opacity: 0.95;
-}
-
 /*Links*/
 a {
     color: #fff;
@@ -386,20 +365,6 @@ figcaption {
         text-align: justify;
     }
 
-
-    .contact ul {
-        display: inline-block;
-        text-align: center;
-        list-style: none;
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .contact li {
-        display: inline-block;
-        font-size: 27px;
-    }
-
 .contact-form .input {
     width: 100%;
     font-size: 0.65em;
@@ -445,6 +410,43 @@ figcaption {
     cursor: pointer;
 }
 
+/*Footer*/
+footer {
+    border-top: 1px solid #4D4E50;
+    color: #002a5c;
+    width: 100%;
+    overflow: hidden;
+    opacity: 0.90;
+}
+
+    footer div p {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    footer ul {
+        display: inline-block;
+        text-align: center;
+        list-style: none;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    footer li {
+        display: inline-block;
+    }
+
+.footer-icons {
+    background-color: #002a5c;
+    max-height: 50px;
+    text-align: center;
+    opacity: 0.95;
+}
+
+.copyright{
+    text-align: center;
+}
+
 /*Social Icons*/
 .social-icon-header {
     color: #002a5c;
@@ -452,8 +454,8 @@ figcaption {
 }
 
 .social-icon-contact {
-    color: #002a5c;
-    font-size: 1.8vw;
+    color: #ffffff;
+    font-size: 1vw;
 }
 
 .social-icons i {
