@@ -278,17 +278,17 @@ figcaption {
     display: inline-block;
 }
 
+.project-title ul li{
+            list-style-type: none;
+        display: inline-block;
+}
+
 .project-description-box {
     display: inline-block;
     flex-direction: column;
     width: 50%;
     color: #002a5c;
 }
-
-    .project-description-box ul li {
-        list-style-type: none;
-        display: inline-block;
-    }
 
 .project-image-box {
     float: left;
@@ -299,7 +299,7 @@ figcaption {
 
 .project p {
     font-size: 0.8em;
-        text-align: justify;
+    text-align: justify;
 }
 
 .left-pos-box {
