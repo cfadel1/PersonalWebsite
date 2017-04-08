@@ -22,8 +22,35 @@ a {
         text-decoration: underline;
     }
 
+.menu a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+}
+
+    .menu a:hover:before {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+
+    .menu a:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #fff;
+        visibility: hidden;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+    }
+
 /*Page Banner*/
-.index-banner {
+.banner {
     width: 100%;
     height: 50vh;
     position: relative;
@@ -34,22 +61,14 @@ a {
     box-shadow: 3px 3px 13px 5px rgba(37, 37, 37, 0.35);
 }
 
-.about-me-banner {
-    background-size: cover;
-}
-
-.portfolio-banner {
-    background-size: 201vh 26vw;
-}
-
-.index-banner-overlay {
+.banner-overlay {
     width: 100%;
     height: 100%;
     position: absolute;
     z-index: 10;
 }
 
-.index-banner-text-wrapper {
+.banner-text-wrapper {
     position: relative;
     top: 35%;
     text-align: center;
@@ -58,17 +77,8 @@ a {
     padding-right: 10vw;
 }
 
-.portfolio-banner-text-wrapper {
-    position: relative;
-    top: 57%;
-    text-align: center;
-    z-index: 20;
-    padding-left: 10vw;
-    padding-right: 10vw;
-}
-
-.index-banner-title {
-    font: 4.5em 'Alegreya', serif;
+.banner-title {
+    font: 60px 'Alegreya', serif;
     font-weight: 600;
     margin-top: 0px;
     color: #002a5c;
@@ -76,19 +86,9 @@ a {
     text-transform: uppercase;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.5);
-    width: 43%;
+    width: 40vh;
     margin-left: auto;
     margin-right: auto;
-}
-
-.portfolio-title {
-    font: 4.5em 'Alegreya', serif;
-    font-weight: 600;
-    margin-top: 0px;
-    color: #ffffff;
-    letter-spacing: 60px;
-    text-transform: uppercase;
-    text-align: center;
 }
 
 .banner-icon-wrapper {
@@ -97,7 +97,7 @@ a {
     z-index: 25;
 }
 
-.center-margin, .width-75, .content-wrapper, .banner-icon {
+.banner-icon {
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -179,11 +179,6 @@ nav li:hover {
     color: #ffffff;
 }
 
-.current {
-    color: #fff;
-    text-decoration: underline;
-}
-
 .clear {
     clear: both;
     height: 40px;
@@ -205,8 +200,6 @@ nav li:hover {
     margin-right: auto;
     display: block;
     opacity: 0.95;
-    font: 1.5em 'Alegreya', serif;
-    color: #ffffff;
 }
 
 .inner-box {
@@ -215,7 +208,7 @@ nav li:hover {
     margin-right: auto;
     display: block;
     opacity: 0.95;
-    font: 1.5em 'Alegreya', serif;
+    font: 25px 'Alegreya', serif;
     color: #002a5c;
     text-align: justify;
 }
@@ -247,7 +240,6 @@ figure {
     margin: 2% 2% 1% 2%;
     display: inline-block;
     font-size: 2.5em;
-    /*color: #000000;*/
 }
 
 figcaption {
@@ -259,6 +251,63 @@ figcaption {
 .project {
     display: inline-block;
 }
+
+.project-title h2 {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #002a5c;
+}
+
+.project-title {
+    display: inline-block;
+    position: relative;
+    color: #002a5c;
+}
+
+.project-title:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    transition: width 0s ease, background .5s ease;
+}
+
+.project-title:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+	background: #002a5c;
+    transition: width .5s ease;
+}
+
+.project-title:hover:before {
+    width: 100%;
+	background: #002a5c;
+    transition: width .5s ease;
+}
+
+.project-title:hover:after {
+    width: 100%;
+    background: transparent;
+    transition: all 0s ease;
+}
+
+.project-link {
+    display: inline-block;
+    font-size: 1em;
+}
+
+    .project-link li .fa-github:hover {
+        background-color: transparent;
+    }
 
 .project-title ul li {
     list-style-type: none;
@@ -280,7 +329,7 @@ figcaption {
 }
 
 .project p {
-    font-size: 0.8em;
+    font-size: 25px;
     text-align: justify;
 }
 
@@ -292,24 +341,6 @@ figcaption {
     float: right;
 }
 
-.project-title h2 {
-    display: inline-block;
-    cursor: pointer;
-    font-size: 1.2em;
-}
-
-.project-title:hover {
-    color: black;
-}
-
-.project-link {
-    display: inline-block;
-    font-size: 1em;
-}
-
-    .project-link li .fa-github:hover {
-        background-color: transparent;
-    }
 
 .project1 {
     width: 50%;
@@ -324,7 +355,7 @@ figcaption {
 
 .project2 {
     width: 50%;
-    height: 34vh;
+    height: 29vh;
     position: relative;
     z-index: 2;
     background-image: url(img/Keylogger.png);
@@ -361,7 +392,7 @@ figcaption {
 }
 
     .contact p {
-        font: 1.8vw 'Alegreya', serif;
+        font: 25px 'Alegreya', serif;
         text-align: justify;
     }
 
@@ -391,7 +422,7 @@ figcaption {
 .contact-form textarea {
     overflow: auto;
     max-width: 100%;
-    font-size: 1.3vw;
+    font-size: 18px;
     min-height: 100px;
     margin-top: 1vh;
 }
@@ -424,9 +455,9 @@ figcaption {
     cursor: pointer;
 }
 
-.fieldClicked{
+/*.fieldClicked{
     font-size: 1.3em !important;
-}
+}*/
 
 /*Footer*/
 footer {
@@ -468,7 +499,11 @@ footer {
 /*Social Icons*/
 .social-icon-header {
     color: #002a5c;
-    font-size: 1.8vw;
+    font-size: 25px;
+}
+
+.about-me-icons {
+    text-align: center;
 }
 
 .social-icon-contact {
