@@ -371,13 +371,13 @@ figcaption {
     z-index: 2;
     background-image: url(img/Pedometer.png);
     background-repeat: no-repeat;
-    background-position: 50% 0%;
+    background-position: 50% 100%;
     background-size: 50% 90%;
 }
 
 .project4 {
     width: 50%;
-    height: 40vh;
+    height: 29vh;
     position: relative;
     z-index: 2;
     background-image: url(img/stocks.jpg);
