@@ -665,7 +665,7 @@ footer {
     }
 
     .social-icon-header {
-    font-size: 15px;
+        font-size: 15px;
     }
 
     figure {
@@ -713,8 +713,8 @@ footer {
         height: 10px;
     }
 
-        .clear {
-height: 20px;
+    .clear {
+        height: 20px;
     }
 
     .loader-effect {
@@ -732,6 +732,10 @@ height: 20px;
 
     .inner.three {
         border-top: 0.15em solid #002a5c;
+    }
+
+    .contact-form textarea {
+        min-height: 50px;
     }
 }
 
