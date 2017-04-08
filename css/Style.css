@@ -648,8 +648,8 @@ footer {
     }
 
     .banner-title {
-        width: 50vw;
-        font: 44px 'Alegreya', serif;
+        width: 60vw;
+        font: 35px 'Alegreya', serif;
     }
 
     nav ul li {
@@ -677,19 +677,57 @@ footer {
     }
 
     .project p {
-        font-size: 15px;
+        font: 14px 'Alegreya', serif;
     }
 
     .inner-box {
-        font: 21px 'Alegreya', serif;
+        font: 16px 'Alegreya', serif;
     }
 
     .contact p {
-        font: 21px 'Alegreya', serif;
+        font: 16px 'Alegreya', serif;
     }
 
     .submit {
-        font-size: 18px;
+        font-size: 16px;
+    }
+
+    .banner-icon {
+        width: 150px;
+        height: 150px;
+        margin-top: -90px;
+        background-position-x: -25px;
+        border: 2px solid rgba(255, 237, 237, 0.54);
+        box-shadow: 2px 2px 11px 4px rgba(37, 37, 37, 0.35);
+    }
+
+    .contact-form textarea {
+        font-size: 16px;
+    }
+
+    .copyright p {
+        font-size: 12px;
+    }
+
+    .half_clear {
+        height: 10px;
+    }
+
+    .loader-effect {
+        width: 6em;
+        height: 6em;
+    }
+
+    .inner.one {
+        border-bottom: 0.15em solid #002a5c;
+    }
+
+    .inner.two {
+        border-right: 0.15em solid #002a5c;
+    }
+
+    .inner.three {
+        border-top: 0.15em solid #002a5c;
     }
 }
 
