@@ -646,6 +646,32 @@ footer {
     .project4 {
         width: 100%;
     }
+
+    .banner-title{
+            width: 32vh;
+            font: 44px 'Alegreya', serif;
+    }
+    nav ul li{
+        font-size: 15px;
+    }
+    .social-icon-contact {
+    font-size: 15px;
+}
+    .about-me-icons i {
+    margin: 0.25em 0.25em;
+}
+    .social-icon-header {
+    font-size: 20px;
+}
+    figure {
+    font-size: 2em;
+}
+figcaption {
+    font-size: 0.25em;
+}
+
+
+
 }
 
 @keyframes rotate-one {
