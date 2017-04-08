@@ -647,31 +647,50 @@ footer {
         width: 100%;
     }
 
-    .banner-title{
-            width: 32vh;
-            font: 44px 'Alegreya', serif;
+    .banner-title {
+        width: 50vw;
+        font: 44px 'Alegreya', serif;
     }
-    nav ul li{
+
+    nav ul li {
         font-size: 15px;
     }
+
     .social-icon-contact {
-    font-size: 15px;
-}
+        font-size: 15px;
+    }
+
     .about-me-icons i {
-    margin: 0.25em 0.25em;
-}
+        margin: 0.25em 0.25em;
+    }
+
     .social-icon-header {
-    font-size: 20px;
-}
+        font-size: 20px;
+    }
+
     figure {
-    font-size: 2em;
-}
-figcaption {
-    font-size: 0.25em;
-}
+        font-size: 2em;
+    }
 
+    figcaption {
+        font-size: 0.25em;
+    }
 
+    .project p {
+        font-size: 15px;
+    }
 
+    .inner-box {
+        font: 21px 'Alegreya', serif;
+    }
+
+    .contact p {
+        font: 21px 'Alegreya', serif;
+    }
+
+    .submit {
+        font-size: 18px;
+    }
 }
 
 @keyframes rotate-one {
