@@ -265,40 +265,40 @@ figcaption {
     color: #002a5c;
 }
 
-.project-title:before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 3px;
-    width: 0;
-    transition: width 0s ease, background .5s ease;
-}
+    .project-title:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 0;
+        transition: width 0s ease, background .5s ease;
+    }
 
-.project-title:after {
-    content: '';
-    display: block;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    height: 3px;
-    width: 0;
-	background: #002a5c;
-    transition: width .5s ease;
-}
+    .project-title:after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 3px;
+        width: 0;
+        background: #002a5c;
+        transition: width .5s ease;
+    }
 
-.project-title:hover:before {
-    width: 100%;
-	background: #002a5c;
-    transition: width .5s ease;
-}
+    .project-title:hover:before {
+        width: 100%;
+        background: #002a5c;
+        transition: width .5s ease;
+    }
 
-.project-title:hover:after {
-    width: 100%;
-    background: transparent;
-    transition: all 0s ease;
-}
+    .project-title:hover:after {
+        width: 100%;
+        background: transparent;
+        transition: all 0s ease;
+    }
 
 .project-link {
     display: inline-block;
@@ -340,7 +340,6 @@ figcaption {
 .right-pos-box {
     float: right;
 }
-
 
 .project1 {
     width: 50%;
@@ -511,7 +510,7 @@ footer {
     font-size: 1vw;
 }
 
-.social-icons i {
+.about-me-icons i {
     margin: 0.5em 0.5em;
 }
 
@@ -626,6 +625,28 @@ footer {
         animation: rotate-three 1s linear infinite;
         border-top: 0.35em solid #002a5c;
     }
+
+@media screen and (max-width: 768px) {
+    .project-description-box {
+        width: 100%;
+    }
+
+    .project1 {
+        width: 100%;
+    }
+
+    .project2 {
+        width: 100%;
+    }
+
+    .project3 {
+        width: 100%;
+    }
+
+    .project4 {
+        width: 100%;
+    }
+}
 
 @keyframes rotate-one {
     0% {
