@@ -418,12 +418,13 @@ figcaption {
     font-size: 0.65em;
 }
 
-.contact-form textarea {
-    overflow: auto;
-    max-width: 100%;
-    font-size: 18px;
-    min-height: 100px;
-    margin-top: 1vh;
+.contact-form .input:focus, .contact-form textarea:focus {
+    border-bottom: 3px solid #002a5c !important;
+    font-size: 22px !important;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
 }
 
 *::-webkit-input-placeholder {
@@ -442,7 +443,7 @@ figcaption {
     color: #002a5c;
 }
 
-.submit {
+.validation-btn {
     font-size: 0.6em;
     float: right;
     color: #e1e1e1;
@@ -454,9 +455,11 @@ figcaption {
     cursor: pointer;
 }
 
-/*.fieldClicked{
-    font-size: 1.3em !important;
-}*/
+.error-msg{
+    display: inline-block;
+    color: red;
+    font-size: 18px;
+}
 
 /*Footer*/
 footer {
@@ -728,7 +731,7 @@ footer {
         font: 16px 'Alegreya', serif;
     }
 
-    .submit {
+    .validation-btn {
         font-size: 16px;
     }
 

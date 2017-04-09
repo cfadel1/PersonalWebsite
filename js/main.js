@@ -16,17 +16,26 @@ $(document).ready(function () {
         });
     });
 
-    //$("#first_name").on("focusin", function () {
-    //    $('#first_name').addClass('fieldClicked');
-    //});
-
-    //$("#last_name").on("focusin", function () {
-    //    $('#first_name').addClass('fieldClicked');
-    //});
-    //$("#email").on("focusin", function () {
-    //    $('#first_name').addClass('fieldClicked');
-    //});
-    //$("#message").on("focusin", function () {
-    //    $('#first_name').addClass('fieldClicked');
-    //});
+    $('.validation-btn').on('click', function () {
+        var name = $('.name').val();
+        var email = $('.email').val();
+        var msg = $('.message').val();
+        debugger;
+        if (name == "" || name == null, email == "" || email == null, msg == "" || msg == null) {
+            $('.error-msg').text("Please Fill All Required Fields");
+            $('.error-msg').show();
+        }
+        else if (!validateEmail(email)) {
+            $('.error-msg').text("Please Enter A Valid Email");
+            $('.error-msg').show();
+        }
+        else {
+            $('.submit').click();
+        }
+    });
 });
+
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
