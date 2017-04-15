@@ -20,7 +20,7 @@ $(document).ready(function () {
         var name = $('.name').val();
         var email = $('.email').val();
         var msg = $('.message').val();
-        debugger;
+
         if (name == "" || name == null, email == "" || email == null, msg == "" || msg == null) {
             $('.error-msg').text("Please Fill All Required Fields");
             $('.error-msg').show();
