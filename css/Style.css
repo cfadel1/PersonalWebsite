@@ -445,9 +445,29 @@ figcaption {
         outline: none;
     }
 
-*::-webkit-input-placeholder, *:-moz-placeholder, *::-moz-placeholder, *:-ms-input-placeholder {
+*::-webkit-input-placeholder {
     color: #002a5c;
 }
+
+*:-moz-placeholde {
+    color: #002a5c;
+}
+
+
+*::-moz-placeholder {
+    color: #002a5c;
+}
+
+
+*:-ms-input-placeholder {
+    color: #002a5c;
+}
+
+
+.safari_only {
+    color: #002a5c;
+}
+
 
 .validation-btn {
     font-size: 0.6em;
@@ -814,7 +834,11 @@ footer {
     }
 
     .validation-btn {
-        font-size: 16px;
+        font-size: 14px;
+        padding: 2% 4%;
+        border: none;
+        border-radius: 1px;
+        box-sizing: border-box;
     }
 
     .banner-icon {
@@ -870,7 +894,7 @@ footer {
 
 @media screen and (max-width: 500px) {
     .col-1 {
-        width: 38%;
+        width: 100%;
     }
 
     .center-col {
@@ -880,5 +904,25 @@ footer {
 
     .left-col-1 {
         padding-left: 0;
+    }
+
+    .left-col {
+        width: 33%;
+    }
+
+    .right-col {
+        width: 65%;
+    }
+
+    .center-col {
+        border-left: 0;
+        border-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        display: block;
+    }
+
+    .description {
+        margin-top: 0;
     }
 }
