@@ -16,23 +16,23 @@ $(document).ready(function () {
         });
     });
 
-    $('.validation-btn').on('click', function () {
-        var name = $('.name').val();
-        var email = $('.email').val();
-        var msg = $('.message').val();
+    //$('.validation-btn').on('click', function () {
+    //    var name = $('.name').val();
+    //    var email = $('.email').val();
+    //    var msg = $('.message').val();
 
-        if (name == "" || name == null, email == "" || email == null, msg == "" || msg == null) {
-            $('.error-msg').text("Please Fill All Required Fields");
-            $('.error-msg').show();
-        }
-        else if (!validateEmail(email)) {
-            $('.error-msg').text("Please Enter A Valid Email");
-            $('.error-msg').show();
-        }
-        else {
-            $('.submit').click();
-        }
-    });
+    //    if (name == "" || name == null, email == "" || email == null, msg == "" || msg == null) {
+    //        $('.error-msg').text("Please Fill All Required Fields");
+    //        $('.error-msg').show();
+    //    }
+    //    else if (!validateEmail(email)) {
+    //        $('.error-msg').text("Please Enter A Valid Email");
+    //        $('.error-msg').show();
+    //    }
+    //    else {
+    //        $('.submit').click();
+    //    }
+    //});
 });
 
 function validateEmail(email) {

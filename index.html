@@ -156,21 +156,20 @@
                     <div class="contact-form">
                         <form method="post" action="http://formspree.io/cedricfadel@hotmail.com">
                             <div>
-                                <input class="input name" id="name" name="name" type="text" aria-required="true" placeholder="Name">
+                                <input class="input name form-text" id="name" name="name" type="text" aria-required="true" placeholder="Name">
                             </div>
                             <!--<div>
                                 <input class="input last_name" name="last_name" type="text" aria-required="true" placeholder="Last Name">
                             </div>-->
                             <div>
-                                <input class="input email" id="email" name="_replyto" type="email" aria-required="true" placeholder="E-mail">
+                                <input class="input email form-text" id="email" name="_replyto" type="email" aria-required="true" placeholder="E-mail">
                             </div>
                             <div class="contact-textarea">
-                                <textarea class="message" id="message" name="body" type="text" aria-required="true" placeholder="Message"></textarea>
+                                <textarea class="message form-text" id="message" name="body" type="text" aria-required="true" placeholder="Message"></textarea>
                             </div>
                             <div>
                                 <p type="hidden" class="error-msg"></p>
-                                <input class="validation-btn" type="button" value="Submit" />
-                                <input hidden class="submit" type="submit" onclick="SubmitFormData();"/>
+                                <button class="button" type="submit" onclick="SubmitFormData();"><span>Submit </span></button>
                             </div>
                         </form>
                     </div>
