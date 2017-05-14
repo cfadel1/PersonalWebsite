@@ -14,7 +14,7 @@ img {
 a {
     color: #ffffff;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 400;
 }
 
     a:hover {
@@ -78,7 +78,7 @@ a {
 }
 
 .banner-title {
-    font: 60px 'Alegreya', serif;
+    font: 60px 'GalanoBold', serif;
     font-weight: 600;
     margin-top: 0px;
     color: #002a5c;
@@ -86,7 +86,7 @@ a {
     text-transform: uppercase;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.5);
-    width: 400px;
+    width: 430px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -157,6 +157,7 @@ header {
 }
 
 nav ul li {
+    font-family: GalanoBold, sans-serif;
     display: inline-block;
     list-style: none;
     float: left;
@@ -203,7 +204,7 @@ nav li:hover {
     margin-right: auto;
     display: block;
     opacity: 0.95;
-    font: 25px 'Alegreya', serif;
+    font: 25px 'HelveticaNeueBold', serif;
     color: #002a5c;
     text-align: justify;
 }
@@ -228,7 +229,7 @@ nav li:hover {
 }
 
 .skills_and_tools i {
-    font: 1.5em 'Gidugu', serif;
+    font: 1.5em 'HelveticaNeueBold', serif;
 }
 
 figure {
@@ -386,7 +387,7 @@ figcaption {
 }
 
     .contact p {
-        font: 25px 'Alegreya', serif;
+        font: 25px 'HelveticaNeueBold', serif;
         text-align: justify;
     }
 
@@ -420,7 +421,7 @@ figcaption {
         border-left: none;
         border-right: none;
         outline: none;
-        font-weight: 500;
+        font-weight: 600;
     }
 
 *::-webkit-input-placeholder {
@@ -453,19 +454,25 @@ figcaption {
     border: none;
     color: #FFFFFF;
     text-align: center;
-    font-size: 23px;
-    padding: 15px;
-    width: 150px;
+    padding: 11px;
+    width: 123px;
     transition: all 0.5s;
     cursor: pointer;
     float: right;
+    opacity: 0.9;
+}
+
+.button:hover{
+    opacity: 1;
 }
 
     .button span {
+        font-family: HelveticaNeueBold, sans-serif;
         cursor: pointer;
         display: inline-block;
         position: relative;
         transition: 0.5s;
+        font-size: 25px;
     }
 
         .button span:after {
@@ -681,7 +688,7 @@ footer {
     }
 
 .form-text {
-    font: 0.8em arial;
+    font: 0.8em HelveticaNeueBold;
 }
 
 /*Resume*/
@@ -711,7 +718,7 @@ footer {
 }
 
 .description {
-    font-family: Raleway, sans-serif;
+    font-family: HelveticaNeueBold, sans-serif;
     font-size: 0.8em;
     text-align: justify;
     margin-top: 5px;
@@ -801,11 +808,12 @@ footer {
 
     .banner-title {
         width: 250px;
-        font: 35px 'Alegreya', serif;
+        font: 35px 'GalanoBold', serif;
     }
 
     nav ul li {
         font-size: 0.8em;
+        font-family: GalanoBold, sans-serif;
         line-height: 30px;
     }
 
@@ -830,7 +838,7 @@ footer {
     }
 
     .project p {
-        font: 14px 'Alegreya', serif;
+        font: 14px 'HelveticaNeueBold', serif;
     }
 
     .project-title:before {
@@ -842,11 +850,11 @@ footer {
     }
 
     .inner-box {
-        font: 16px 'Alegreya', serif;
+        font: 16px 'HelveticaNeueBold', serif;
     }
 
     .contact p {
-        font: 16px 'Alegreya', serif;
+        font: 16px 'HelveticaNeueBold', serif;
     }
 
     .validation-btn {
@@ -871,7 +879,7 @@ footer {
     }
 
     .copyright p {
-        font: 12px 'Alegreya', serif;
+        font: 12px 'HelveticaNeueBold', serif;
     }
 
     .half-clear {
@@ -905,10 +913,10 @@ footer {
     }
 
         .contact-form .input:focus, .contact-form textarea:focus {
-        border-bottom: 2.5px solid #002a5c !important;
-        font-size: 16px !important;
-        font-weight: 500;
-    }
+            border-bottom: 2.5px solid #002a5c !important;
+            font-size: 16px !important;
+            font-weight: 500;
+        }
 
     .button {
         font-size: 14px;
