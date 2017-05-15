@@ -78,7 +78,8 @@ a {
 }
 
 .banner-title {
-    font: 60px 'GalanoBold', serif;
+    font-size: 60px;
+    font-family: 'GalanoBold', sans-serif;
     font-weight: 600;
     margin-top: 0px;
     color: #002a5c;
@@ -157,7 +158,6 @@ header {
 }
 
 nav ul li {
-    font-family: GalanoBold, sans-serif;
     display: inline-block;
     list-style: none;
     float: left;
@@ -628,7 +628,7 @@ footer {
 }
 
     .fa-file-text-o:hover {
-        background-color: #002a5c;
+        background-color: #2f4f4f ;
     }
 
 /*Page loader*/
@@ -743,6 +743,10 @@ footer {
 
 .left-col-1 {
     padding-left: 1em;
+}
+
+.get-in-touch{
+     margin-bottom: 10px;
 }
 
 @keyframes rotate-one {
