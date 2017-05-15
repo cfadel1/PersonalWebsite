@@ -23,6 +23,7 @@ a {
     }
 
 .menu a {
+    display: block;
     position: relative;
     color: #ffffff;
     text-decoration: none;
@@ -130,6 +131,7 @@ a {
     padding: 1.25% 0 0 0;
     display: block;
     text-align: left;
+    margin-bottom: 10px;
 }
 
 .sub-title {
@@ -462,9 +464,9 @@ figcaption {
     opacity: 0.9;
 }
 
-.button:hover{
-    opacity: 1;
-}
+    .button:hover {
+        opacity: 1;
+    }
 
     .button span {
         font-family: HelveticaNeueBold, sans-serif;
@@ -628,7 +630,7 @@ footer {
 }
 
     .fa-file-text-o:hover {
-        background-color: #2f4f4f ;
+        background-color: #2f4f4f;
     }
 
 /*Page loader*/
@@ -691,6 +693,10 @@ footer {
     font: 0.8em HelveticaNeueBold;
 }
 
+.message {
+    resize: vertical;
+}
+
 /*Resume*/
 .left-col {
     width: 25%;
@@ -745,8 +751,8 @@ footer {
     padding-left: 1em;
 }
 
-.get-in-touch{
-     margin-bottom: 10px;
+.get-in-touch {
+    margin-bottom: 10px;
 }
 
 @keyframes rotate-one {
