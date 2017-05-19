@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 
 @font-face {
-  font-family: GalanoBold;
-  src: url("fonts/Galano-Bold.otf") format("opentype");
+    font-family: GalanoBold;
+    src: url("fonts/Galano-Bold.otf") format("opentype");
 }
 /*Main*/
 * {
@@ -56,6 +56,18 @@ a {
         transition: all 0.3s ease-in-out 0s;
     }
 
+hr {
+    display: block;
+    text-align: center;
+}
+
+    hr:before {
+        content: "...";
+        display: inline-block;
+        color: #184276;
+        font-size: 28px;
+        letter-spacing: .6em;
+    }
 /*Page Banner*/
 .banner {
     width: 100%;
@@ -87,7 +99,6 @@ a {
 .banner-title {
     font-size: 60px;
     font-family: 'GalanoBold', sans-serif;
-    font-weight: 600;
     margin-top: 0px;
     color: #184276;
     letter-spacing: 5px;
@@ -97,7 +108,7 @@ a {
     width: 430px;
     margin-left: auto;
     margin-right: auto;
-    letter-spacing: -3px;
+    letter-spacing: -2.5px;
 }
 
 .banner-icon-wrapper {
@@ -146,7 +157,7 @@ a {
     text-align: center;
 }
 
-.underline{
+.underline {
     background-color: #184276;
     display: block;
     border: none;
@@ -158,6 +169,20 @@ a {
     box-shadow: none;
     margin-left: auto;
     margin-right: auto;
+    opacity: 0.9;
+}
+
+.underline-project {
+    background-color: #184276;
+    display: block;
+    border: none;
+    width: 50px;
+    height: 3px;
+    margin-bottom: 15px;
+    padding: 0;
+    border-radius: 1px;
+    box-shadow: none;
+    margin-top: -3px;
 }
 
 /*Navigation*/
@@ -199,8 +224,7 @@ nav li:hover {
     color: #ffffff;
 }
 
-.current{
-    
+.current {
 }
 
 .clear {
@@ -303,7 +327,7 @@ figcaption {
         content: '';
         display: block;
         position: absolute;
-        right: 0;
+        left: 0;
         bottom: 0;
         height: 2.5px;
         width: 0;
@@ -526,15 +550,7 @@ figcaption {
     font-size: 18px;
 }
 
-/*Footer*/
-/*.page-footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}*/
-
 footer {
-    border-top: 1px solid #4D4E50;
     color: #184276;
     width: 100%;
     overflow: hidden;
@@ -567,6 +583,7 @@ footer {
 
 .copyright {
     text-align: center;
+    padding-top: 0.8em;
 }
 
 /*Social Icons*/
@@ -882,6 +899,14 @@ footer {
     .project-title:after {
         height: 2px;
     }
+    .underline-project {
+        height: 2px;
+        margin-top: -2px;
+    }
+
+    .underline {
+        height: 2px;
+    }
 
     .inner-box {
         font-size: 16px;
@@ -958,16 +983,20 @@ footer {
         width: 100%;
     }
 
-        .button span{
+        .button span {
             font-size: 15px;
         }
-        
+
         .button:hover span {
             padding-right: 15px;
         }
 }
 
 @media screen and (max-width: 500px) {
+    hr:before {
+        letter-spacing: 0.3em;
+    }
+
     .col-1 {
         width: 100%;
     }
@@ -982,11 +1011,11 @@ footer {
     }
 
     .left-col {
-        width: 33%;
+        width: 100%;
     }
 
     .right-col {
-        width: 65%;
+        width: 100%;
     }
 
     .center-col {
@@ -1001,7 +1030,7 @@ footer {
         margin-top: 0;
     }
 
-    .underline{
+    .underline {
         width: 35px;
     }
 }
