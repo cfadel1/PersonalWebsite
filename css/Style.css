@@ -823,7 +823,8 @@ hr {
     }
 
         .cnn-blog ul li:before {
-            content: '\2014  ';
+            content: '\2014 ';
+            margin-left: -24px;
         }
 
 .references ul li:before {
@@ -1084,5 +1085,10 @@ hr {
 
     .blog-summary {
         max-height: none;
+    }
+
+    .cnn-blog ul li:before {
+        content: '\2014 ';
+        margin-left: 0;
     }
 }
