@@ -106,9 +106,9 @@
                         I will be describing the steps that are processed in the first convolutional layer.
                         <div class="quarter-clear"></div>
                         <ul>
-                            <li>Depending on the convolutional layer there are a various set of filters that are used to detect various aspects of an image. The number of filter can also differ and they’re also known as the hyper parameters for our layers. The decision on how the number of hyper parameter required is its own field of study, but there are of course hyper parameter optimization methods out there.  Different filters can be used to detect different features of an image, its shape, its edges, its colors and more. Therefore, a filter can also be called a kernel or even a feature detector. The higher the number of filter the more the features we can extract and the better our network will become.</li>
-                            <li>Each one of the filters strides through the image and keeps track of the result. A stride is the movement of a filter over the inputted image in either the horizontally axis or the vertical axis. Let’s consider a 5x5 picture and a 3x3 filter.</li>
-                            <li>For each position, the dot product is being calculated between the filter and the image pixels under the filter. The output of the dot product gives us a “Convolved Feature” or also called an “Activation Map” or even a “Feature Map”. In the gif above, the orange matrix is the filter that is striding horizontally then vertically through the image (green matrix) and for every position, the element wise multiplication is computed between both matrices.</li>
+                            <li> Depending on the convolutional layer there are a various set of filters that are used to detect various aspects of an image. The number of filter can also differ and they’re also known as the hyper parameters for our layers. The decision on how the number of hyper parameter required is its own field of study, but there are of course hyper parameter optimization methods out there.  Different filters can be used to detect different features of an image, its shape, its edges, its colors and more. Therefore, a filter can also be called a kernel or even a feature detector. The higher the number of filter the more the features we can extract and the better our network will become.</li>
+                            <li> Each one of the filters strides through the image and keeps track of the result. A stride is the movement of a filter over the inputted image in either the horizontally axis or the vertical axis. Let’s consider a 5x5 picture and a 3x3 filter.</li>
+                            <li> For each position, the dot product is being calculated between the filter and the image pixels under the filter. The output of the dot product gives us a “Convolved Feature” or also called an “Activation Map” or even a “Feature Map”. In the gif above, the orange matrix is the filter that is striding horizontally then vertically through the image (green matrix) and for every position, the element wise multiplication is computed between both matrices.</li>
                         </ul>
 
                         <div class="clear"></div>
@@ -119,10 +119,10 @@
                         <div class="clear"></div>
 
                         <ul>
-                            <li>When the filter reaches the end of the image, the image gets padded with zeros. This means, all the sections that were not detected or evaluated by the filter will get a value of zero. This is done to preserve the initial size of the image.</li>
-                            <li>The output, the convolved feature can be passed through a Rectified Linear Unit (ReLU). A ReLu is a non-linear operation that takes the values from the matrix and ensures that they are all positive (it rectifies them). It is an element wise operation (applied per pixel) and replaces all negative pixel values in the feature map by zero.</li>
-                            <li>One image can have many Feature Maps. This will require a lot of space so a technique for down-sampling the images will be used. The method is called max-pooling. Max-pooling goes from left to right through the output with a 2x2 filter and only keeps the largest value of those pixels. This will half the resolution of the input image, e.g. 28x28 to 14x14 pixels. There are other types of spatial pooling such as average or sum pooling, to learn more about them check out the following  <a class="blog-link" href="http://cs231n.github.io/convolutional-networks/#pool"></a>page.</li>
-                            <li>Output : 16 new images (1 feature map) of 14x14</li>
+                            <li> When the filter reaches the end of the image, the image gets padded with zeros. This means, all the sections that were not detected or evaluated by the filter will get a value of zero. This is done to preserve the initial size of the image.</li>
+                            <li> The output, the convolved feature can be passed through a Rectified Linear Unit (ReLU). A ReLu is a non-linear operation that takes the values from the matrix and ensures that they are all positive (it rectifies them). It is an element wise operation (applied per pixel) and replaces all negative pixel values in the feature map by zero.</li>
+                            <li> One image can have many Feature Maps. This will require a lot of space so a technique for down-sampling the images will be used. The method is called max-pooling. Max-pooling goes from left to right through the output with a 2x2 filter and only keeps the largest value of those pixels. This will half the resolution of the input image, e.g. 28x28 to 14x14 pixels. There are other types of spatial pooling such as average or sum pooling, to learn more about them check out the following  <a class="blog-link" href="http://cs231n.github.io/convolutional-networks/#pool"></a>page.</li>
+                            <li> Output : 16 new images (1 feature map) of 14x14</li>
 
                         </ul>
                         <div class="quarter-clear"></div>
@@ -143,13 +143,13 @@
                     <div>
                         The output of the first convolutional layer will become the input of the second convolutional layer. The purpose of each one of the convolutional layers is to extract features from the input image while preserving the relationship between pixels. A neural network’s accuracy can increase by increasing the number of convolutional layers. This convolution layer is much more concentrated than the first one and only cares about the sections that are important                       <div class="quarter-clear"></div>
                         <ul>
-                            <li>In this case, the inputs are the 16 new images outputted from the first convolutional layer</li>
-                            <li>We need a separate filter for each one of those input channels.</li>
-                            <li>A channel is a term used to refers to a certain component of an image. A colored image will have 3 channels (rgb). You can imagine them as three 2d-matrices stacked over each other (one for each color), each having pixel values in the range 0 to 255.</li>
-                            <li>Now let’s consider a 36-output channel. As mentioned above, there is not precise number for these hyper parameters.</li>
-                            <li>Wanting 36 output channels will require us to have 16 x 36 = 576 filters for this convolutional layer. </li>
-                            <li>It will use the same process as in the first convolutional layer to evaluate these pictures but with the new filters.</li>
-                            <li>Output: 36 new images of 7x7 pixels each.</li>
+                            <li> In this case, the inputs are the 16 new images outputted from the first convolutional layer</li>
+                            <li> We need a separate filter for each one of those input channels.</li>
+                            <li> A channel is a term used to refers to a certain component of an image. A colored image will have 3 channels (rgb). You can imagine them as three 2d-matrices stacked over each other (one for each color), each having pixel values in the range 0 to 255.</li>
+                            <li> Now let’s consider a 36-output channel. As mentioned above, there is not precise number for these hyper parameters.</li>
+                            <li> Wanting 36 output channels will require us to have 16 x 36 = 576 filters for this convolutional layer. </li>
+                            <li> It will use the same process as in the first convolutional layer to evaluate these pictures but with the new filters.</li>
+                            <li> Output: 36 new images of 7x7 pixels each.</li>
                         </ul>
                     </div>
 
@@ -189,9 +189,9 @@
                     <div class="half-clear"></div>
                     <div class="references">
                         <ul>
-                            <li><a class="blog-link" target="_blank" href="https://github.com/llSourcell/How_to_make_a_tensorflow_image_classifier_LIVE/blob/master/demonotes.ipynb">[1] How to make a tensorflow image classifier Live By Siraj</a></li>
-                            <li><a class="blog-link" target="_blank" href="https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/">[2] An Intuitive Explanation of Convolutional Neural Networks By ujjwalkarn, August 11, 2016</a></li>
-                            <li><a class="blog-link" target="_blank" href="http://cs231n.github.io/convolutional-networks/">[3] CS231n Convolutional Neural Networks for Visual Recognition, Stanford</a></li>
+                            <li> <a class="blog-link" target="_blank" href="https://github.com/llSourcell/How_to_make_a_tensorflow_image_classifier_LIVE/blob/master/demonotes.ipynb">[1] How to make a tensorflow image classifier Live By Siraj</a></li>
+                            <li> <a class="blog-link" target="_blank" href="https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/">[2] An Intuitive Explanation of Convolutional Neural Networks By ujjwalkarn, August 11, 2016</a></li>
+                            <li> <a class="blog-link" target="_blank" href="http://cs231n.github.io/convolutional-networks/">[3] CS231n Convolutional Neural Networks for Visual Recognition, Stanford</a></li>
                         </ul>
                     </div>
                 </div>
@@ -209,11 +209,11 @@
             <div class="footer-icons">
                 <div class="social-icons">
                     <ul class="social-icon-contact" style="text-align:center;">
-                        <li><a target="_blank" href="https://www.linkedin.com/in/cedricfadel/" class="social-icon-contact"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li><a target="_blank" href="https://github.com/cfadel1" class="social-icon-contact"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-                        <li><a target="_blank" href="http://stackoverflow.com/users/6680815/cedric-f" class="social-icon-contact"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a></li>
-                        <li><a target="_blank" href="mailto:cedricfadel@hotmail.com" class="social-icon-contact"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-                        <li><a target="_blank" href="resume.html" class="social-icon-contact"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></li>
+                        <li> <a target="_blank" href="https://www.linkedin.com/in/cedricfadel/" class="social-icon-contact"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li> <a target="_blank" href="https://github.com/cfadel1" class="social-icon-contact"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                        <li> <a target="_blank" href="http://stackoverflow.com/users/6680815/cedric-f" class="social-icon-contact"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a></li>
+                        <li> <a target="_blank" href="mailto:cedricfadel@hotmail.com" class="social-icon-contact"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
+                        <li> <a target="_blank" href="resume.html" class="social-icon-contact"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
             </div>
