@@ -845,8 +845,8 @@ hr {
 
 .featuremapPic {
     background-image: url(img/featuremap.gif);
-    height: 20vh;
-    background-size: 20vw 20vh;
+    height: 30vh;
+    background-size: 30vw 30vh;
 }
 
 .imgclassificationpPic {
@@ -857,8 +857,8 @@ hr {
 
 .maxPoolingPic {
     background-image: url(img/maxpooling.png);
-    height: 25vh;
-    background-size: 25vw 25vh;
+    height: 35vh;
+    background-size: 35vw 35vh;
 }
 
 .figure-source {
