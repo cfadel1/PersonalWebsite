@@ -789,6 +789,8 @@ hr {
 
 .blog-summary {
     font-size: 0.7em;
+    max-height: 150px;
+    overflow: auto;
 }
 
 .blog1 {
@@ -817,13 +819,14 @@ hr {
 
     .cnn-blog ul li {
         margin-bottom: 10px;
+        margin-left: 2%;
     }
 
         .cnn-blog ul li:before {
             content: '\2014  ';
         }
 
-.references ul li:before{
+.references ul li:before {
     content: '';
 }
 
@@ -1063,10 +1066,23 @@ hr {
 
     .blog-box {
         height: inherit;
+        width: 88%;
     }
 
     .left-box, .right-box, .blog-btn-div {
         width: 100%;
         float: none;
+    }
+
+    .featuremapPic {
+        background-size: 80vw 20vh;
+    }
+
+    .maxPoolingPic {
+        background-size: 70vw 25vh;
+    }
+
+    .blog-summary {
+        max-height: none;
     }
 }
