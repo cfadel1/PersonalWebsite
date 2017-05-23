@@ -726,6 +726,10 @@ footer {
     margin-bottom: 10px;
 }
 
+.interest {
+    text-align: center;
+}
+
 /*Blog*/
 
 hr {
@@ -1090,5 +1094,9 @@ hr {
     .cnn-blog ul li:before {
         content: '\2014 ';
         margin-left: 0;
+    }
+
+    .interest {
+        text-align: left;
     }
 }
