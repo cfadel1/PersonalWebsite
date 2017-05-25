@@ -35,7 +35,6 @@ $(document).ready(function () {
         }
         else {
             $('#formId').submit();
-
         }
     });
 
@@ -45,7 +44,7 @@ $(document).ready(function () {
         $.ajax({
             url: '//formspree.io/cedricfadel@hotmail.com',
             method: 'POST',
-            data: $('#contact-form').serialize(),
+            data: $('#formId').serialize(),
             dataType: 'json',
             beforeSend: function () {
                 $('.status-msg').text("Sending Message");
