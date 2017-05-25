@@ -150,7 +150,7 @@
                 <div class="quarter-clear"></div>
                 <div class="inner-box">
                     <div class="contact-form">
-                        <form method="post" action="http://formspree.io/cedricfadel@hotmail.com">
+                        <form>
                             <div>
                                 <input class="input name form-text" id="name" name="name" type="text" aria-required="true" placeholder="Name">
                             </div>
@@ -163,9 +163,13 @@
                             <div class="contact-textarea">
                                 <textarea class="message form-text" id="message" name="body" type="text" aria-required="true" placeholder="Message"></textarea>
                             </div>
+                            <input hidden type="text" name="_gotcha">
+                            <input hidden name="_subject" value="Subject">
                             <div>
-                                <p type="hidden" class="error-msg"></p>
-                                <button class="button" type="submit" onclick="SubmitFormData();"><span>Submit </span></button>
+                                <p type="hidden" class="status-msg"></p>
+                            </div>
+                            <div>
+                                <button class="button validation-btn" type="submit"><span>Submit </span></button>
                             </div>
                         </form>
                     </div>

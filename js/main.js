@@ -16,23 +16,48 @@ $(document).ready(function () {
         });
     });
 
-    //$('.validation-btn').on('click', function () {
-    //    var name = $('.name').val();
-    //    var email = $('.email').val();
-    //    var msg = $('.message').val();
+    $('.validation-btn').on('click', function (e) {
+        var name = $('.name').val();
+        var email = $('.email').val();
+        var msg = $('.message').val();
 
-    //    if (name == "" || name == null, email == "" || email == null, msg == "" || msg == null) {
-    //        $('.error-msg').text("Please Fill All Required Fields");
-    //        $('.error-msg').show();
-    //    }
-    //    else if (!validateEmail(email)) {
-    //        $('.error-msg').text("Please Enter A Valid Email");
-    //        $('.error-msg').show();
-    //    }
-    //    else {
-    //        $('.submit').click();
-    //    }
-    //});
+        if (name == "" || name == null, email == "" || email == null, msg == "" || msg == null) {
+            $('.status-msg').text("Please Fill All Required Fields");
+            $('.status-msg').css("color", "red");
+            $('.status-msg').show();
+            return false;
+        }
+        else if (!validateEmail(email)) {
+            $('.status-msg').text("Please Enter A Valid Email");
+            $('.status-msg').css("color", "red");
+            $('.status-msg').show();
+            return false;
+        }
+        else {
+            e.preventDefault();
+            $.ajax({
+                url: '//formspree.io/cedricfadel@hotmail.com',
+                method: 'POST',
+                data: $(this).serialize(),
+                dataType: 'json',
+                beforeSend: function () {
+                    $('.status-msg').text("Sending Message");
+                    $('.status-msg').css("color", "blue");
+                    $('.status-msg').show();
+                },
+                success: function (data) {
+                    $('.status-msg').text("Message Sent");
+                    $('.status-msg').css("color", "blue");
+                    $('.status-msg').show();
+                },
+                error: function (err) {
+                    $('.status-msg').text("Error sending message, Please try again");
+                    $('.status-msg').css("color", "red");
+                    $('.status-msg').show();
+                }
+            });
+        }
+    });
 });
 
 function validateEmail(email) {

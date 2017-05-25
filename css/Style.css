@@ -512,10 +512,11 @@ figcaption {
             right: 0;
         }
 
-.error-msg {
-    display: inline-block;
-    color: red;
-    font-size: 18px;
+.status-msg {
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+    margin-bottom: 10px;
 }
 
 footer {
