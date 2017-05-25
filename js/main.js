@@ -65,7 +65,6 @@ $(document).ready(function () {
                 $('.status-msg').text("Message Sent");
                 $('.status-msg').css("color", "blue");
                 $('.status-msg').show();
-                $(this).get(0).reset();
             },
             error: function (err) {
                 $('.status-msg').text("Error sending message, Please try again");
