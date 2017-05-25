@@ -1,5 +1,15 @@
 $(window).on('load', function () {
-   $('.loader').fadeOut();
+    $('.loader').fadeOut();
+
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-99919362-1', 'auto');
+    ga('send', 'pageview');
 });
 
 $(document).ready(function () {
@@ -55,6 +65,7 @@ $(document).ready(function () {
                 $('.status-msg').text("Message Sent");
                 $('.status-msg').css("color", "blue");
                 $('.status-msg').show();
+                $(this).get(0).reset();
             },
             error: function (err) {
                 $('.status-msg').text("Error sending message, Please try again");
@@ -62,7 +73,6 @@ $(document).ready(function () {
                 $('.status-msg').show();
             }
         });
-        $(this).get(0).reset();
     });
 });
 
@@ -70,3 +80,4 @@ function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
 }
+
