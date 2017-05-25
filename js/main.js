@@ -34,29 +34,35 @@ $(document).ready(function () {
             return false;
         }
         else {
-            e.preventDefault();
-            $.ajax({
-                url: '//formspree.io/cedricfadel@hotmail.com',
-                method: 'POST',
-                data: $(this).serialize(),
-                dataType: 'json',
-                beforeSend: function () {
-                    $('.status-msg').text("Sending Message");
-                    $('.status-msg').css("color", "blue");
-                    $('.status-msg').show();
-                },
-                success: function (data) {
-                    $('.status-msg').text("Message Sent");
-                    $('.status-msg').css("color", "blue");
-                    $('.status-msg').show();
-                },
-                error: function (err) {
-                    $('.status-msg').text("Error sending message, Please try again");
-                    $('.status-msg').css("color", "red");
-                    $('.status-msg').show();
-                }
-            });
+            $('#formId').submit();
+
         }
+    });
+
+    var $contactForm = $('#formId');
+    $contactForm.submit(function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: '//formspree.io/cedricfadel@hotmail.com',
+            method: 'POST',
+            data: $('#contact-form').serialize(),
+            dataType: 'json',
+            beforeSend: function () {
+                $('.status-msg').text("Sending Message");
+                $('.status-msg').css("color", "blue");
+                $('.status-msg').show();
+            },
+            success: function (data) {
+                $('.status-msg').text("Message Sent");
+                $('.status-msg').css("color", "blue");
+                $('.status-msg').show();
+            },
+            error: function (err) {
+                $('.status-msg').text("Error sending message, Please try again");
+                $('.status-msg').css("color", "red");
+                $('.status-msg').show();
+            }
+        });
     });
 });
 
