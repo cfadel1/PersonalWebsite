@@ -32,7 +32,7 @@ $(document).ready(function () {
         var msg = $('.message').val();
 
         if (name == "" || name == null, email == "" || email == null, msg == "" || msg == null) {
-            $('.status-msg').text("Please Fill All Required Fields");
+            $('.status-msg').text("Please Fill All Fields");
             $('.status-msg').css("color", "red");
             $('.status-msg').show();
             return false;
