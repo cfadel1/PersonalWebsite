@@ -260,11 +260,11 @@ nav li:hover {
         display: inline-block;
     }
 
-    
-    .about-me p{
-        text-align: justify;
-        text-justify: inter-word;
-    }
+
+.about-me p {
+    text-align: justify;
+    text-justify: inter-word;
+}
 /*Skills and Tools*/
 .skills-and-tools {
     padding: 0 0 0 0;
@@ -839,6 +839,13 @@ hr {
                 margin-left: -2%;
             }
 
+.ellipsis {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+}
+
 .references ul li:before {
     content: '';
 }
@@ -954,7 +961,7 @@ hr {
         line-height: 30px;
     }
 
-    .about-me p{
+    .about-me p {
         text-align: justify;
         text-justify: inter-word;
     }
@@ -1061,6 +1068,37 @@ hr {
         .button:hover span {
             padding-right: 15px;
         }
+
+    .blog-box {
+        height: inherit;
+        width: 88%;
+        font-size: 20px;
+    }
+
+    .left-box, .right-box, .blog-btn-div {
+        float: none;
+        width: 100%;
+    }
+
+    .featuremapPic {
+        background-size: 80vw 20vh;
+    }
+
+    .maxPoolingPic {
+        background-size: 70vw 25vh;
+    }
+
+    .blog-summary {
+        max-height: none;
+    }
+
+    .cnn-blog ul li:before {
+        margin-left: 0;
+    }
+
+    .interest {
+        text-align: left;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -1102,32 +1140,6 @@ hr {
     }
 
     .blog-box {
-        height: inherit;
-        width: 88%;
-    }
-
-    .left-box, .right-box, .blog-btn-div {
-        float: none;
-        width: 100%;
-    }
-
-    .featuremapPic {
-        background-size: 80vw 20vh;
-    }
-
-    .maxPoolingPic {
-        background-size: 70vw 25vh;
-    }
-
-    .blog-summary {
-        max-height: none;
-    }
-
-    .cnn-blog ul li:before {
-        margin-left: 0;
-    }
-
-    .interest {
-        text-align: left;
+        font-size: 16px;
     }
 }
