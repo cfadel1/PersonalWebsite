@@ -118,7 +118,7 @@ a:hover {
     color: #184276;
     font-family: 'GalanoBold', sans-serif;
     font-size: 60px;
-    letter-spacing: -2.5px;
+    letter-spacing: 3.5px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
@@ -267,7 +267,7 @@ nav li:hover {
 .inner-box {
     color: #184276;
     display: block;
-    font: 25px 'Montserrat', sans-serif;
+    font: 21px 'Montserrat', sans-serif;
     margin-left: auto;
     margin-right: auto;
     opacity: 0.95;
@@ -276,7 +276,7 @@ nav li:hover {
 
 .project-languages {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     margin-top: 5px;
 }
 
@@ -312,7 +312,7 @@ nav li:hover {
 
 figure {
     display: inline-block;
-    font-size: 2.5em;
+    font-size: 2.7em;
     margin: 2% 2% 1% 2%;
 }
 
@@ -438,7 +438,7 @@ figcaption {
     background-image: url(../img/TensorFlow.jpg);
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-size: 120% 100%;
+    background-size: 100% 90%;
     height: 275px;
     position: relative;
 }
@@ -456,7 +456,7 @@ figcaption {
     background-image: url(../img/Pedometer.png);
     background-position: 50% 55%;
     background-repeat: no-repeat;
-    background-size: 85% 75%;
+    background-size: 65% 65%;
     height: 275px;
     position: relative;
 }
@@ -827,7 +827,7 @@ hr:before {
     -webkit-box-shadow: 2px 2px 11px 4px rgba(37, 37, 37, 0.35);
     box-shadow: 2px 2px 11px 4px rgba(37, 37, 37, 0.35);
     display: block;
-    height: 275px;
+    height: 255px;
     padding: 20px;
     width: 100%;
 }
@@ -879,7 +879,7 @@ hr:before {
 .project-summary {
     font-size: 0.9em;
     max-height: 110px;
-    min-height: 88px;
+/*    min-height: 88px;*/
     overflow: auto;
 }
 
@@ -1117,11 +1117,11 @@ hr:before {
     }
 
     .project-title h2 {
-        font-size: 1.6em;
+        font-size: 1.1em;
     }
 
     .project-link {
-        font-size: 1.5em;
+        font-size: 1.1em;
     }
 
     nav ul li {
@@ -1144,11 +1144,11 @@ hr:before {
     }
 
     figure {
-        font-size: 2em;
+        font-size: 3em;
     }
 
     figcaption {
-        font-size: 0.25em;
+        font-size: 0.26em;
     }
 
     .project-description-box,
@@ -1257,7 +1257,7 @@ hr:before {
     .blog-box {
         height: inherit;
         width: 88%;
-        font-size: 20px;
+        font-size: 17px;
     }
 
     .left-box,
