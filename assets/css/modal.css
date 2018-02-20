@@ -1,0 +1,73 @@
+/* MODAL STYLES
+-------------------------------*/
+
+modal {
+    display: none;
+    font-family: 'Montserrat', sans-serif;
+    color: #184276;
+}
+
+.modal {
+    animation: fadein 1s;
+    -moz-animation: fadein 1s;
+    -webkit-animation: fadein 1s;
+}
+
+modal .modal {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    overflow: auto;
+}
+
+modal .modal .modal-body {
+    background: #fff;
+    border-radius: 15px;
+    padding: 1px 25px 20px 25px;
+}
+
+.detailview-modal-body {
+    margin: 15% 25%;
+}
+
+.error-modal-body {
+    margin: 20% 20%;
+}
+
+modal .modal-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.75;
+    z-index: 900;
+}
+
+modal button {
+    float: right;
+    background-color: transparent;
+    border-color: transparent;
+    color: #989898;
+    font-family: 'Raleway', sans-serif;
+    font-size: 19px;
+    margin-right: -19px;
+}
+
+modal button:hover {
+    color: red;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.modal-title {
+    font-size: 23px;
+    margin: 10px 0;
+}

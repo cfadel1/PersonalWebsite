@@ -1,15 +1,25 @@
-﻿<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html ng-app="myApp">
+
 <head>
     <title>Cedric Fadel</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="icon/Website_icon.png">
-    <link rel="stylesheet" href="css/Style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!--    <link rel="stylesheet" href="assets/css/bootstrap.css">-->
+    <link rel="icon" type="image/png" href="assets/icon/Website_icon.png">
+    <link rel="stylesheet" type="text/css" href="assets/css/timeline.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
-    <link rel="stylesheet" href="css/font-awesome-4.7.0\css\font-awesome.css" />
-    <script src="js/jquery-3.2.0.js"></script>
-    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
+
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Angular links -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
 </head>
 
 <body>
@@ -21,180 +31,33 @@
             <div class="inner three"></div>
         </div>
     </div>
-    <!--- NAVIGATION --->
-    <header>
-        <div class="container clearfix">
-            <div id="sidebar">
-                <div id="nav-anchor"></div>
-                <nav>
-                    <ul class="menu">
-                        <li><a href="index.html">About Me</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="blog.html"> Blog</a></li>
-                        <li><a href="resume.html">Resume</a></li>
-                        <li><a href="index.html#section_contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-    <!-- Banner Title and Background -->
-    <div class="banner" style="background-image:url('css/img/toronto.jpg')">
-        <div class="banner-overlay banner-overlay-active"></div>
-        <div class="banner-text-wrapper">
-            <h1 class="banner-title">Cedric Fadel</h1>
-        </div>
-    </div>
-    <!-- Icon and Body -->
-    <div class="body-wrapper-indent">
-        <div class="banner-icon-wrapper">
-            <div class="banner-icon"></div>
-        </div>
 
-        <div class="content-wrapper">
-            <div class="outer-box">
-                <div class="inner-box">
-                    <div class="about-me">
-                        <h2 class="title">About Me</h2>
-                        <span class="underline"></span>
-                        <div class="quarter-clear"></div>
-                        <p class="textarea">
-                            Hi there! My name is Cedric and I am a Computer Engineering student at the University of Waterloo.
-                            I am a developer who loves learning and exploring new technology.
-                            Thank you for visiting my website and feel free to get in touch!
-                        </p>
-                    </div>
-                </div>
-            </div>
+    <!-- Navigation Bar-->
+    <nav-dir></nav-dir>
+    <div ui-view></div>
+    <footer-dir></footer-dir>
 
-            <div class="clear"></div>
+    <!-- Angular Modules -->
+    <script type="text/javascript" src="app/app.module.js"></script>
+    <script type="text/javascript" src="app/app.routes.js"></script>
 
-            <div class="outer-box">
-                <div class="inner-box">
-                    <div class="skills-and-tools">
-                        <h2 class="title">Languages</h2>
-                        <span class="underline"></span>
-                        <figure>
-                            <i class="devicon-angularjs-plain"></i>
-                            <figcaption>Angular</figcaption>
-                        </figure>
-                        <figure>
-                            <i class="devicon-csharp-plain"></i>
-                            <figcaption>C#</figcaption>
-                        </figure>
-                        <figure>
-                            <i class="devicon-cplusplus-plain"></i>
-                            <figcaption>C++</figcaption>
-                        </figure>
-                        <figure>
-                            <i class="devicon-css3-plain"></i>
-                            <figcaption>CSS</figcaption>
-                        </figure>
-                        <figure>
-                            <i class="devicon-git-plain"></i>
-                            <figcaption>Git</figcaption>
-                        </figure>
-                        <figure>
-                            <i class="devicon-html5-plain"></i>
-                            <figcaption>HTML</figcaption>
-                        </figure>
-                        <figure>
-                            <i class="devicon-illustrator-plain"></i>
-                            <figcaption>Illustrator</figcaption>
-                        </figure>
-                        <figure>
-                            <i class="devicon-java-plain"></i>
-                            <figcaption>Java</figcaption>
-                        </figure>
-                        <figure>
-                            <i class="devicon-javascript-plain"></i>
-                            <figcaption>JavaScript</figcaption>
-                        </figure>
-                        <figure>
-                            <i class="devicon-jquery-plain"></i>
-                            <figcaption>JQuery</figcaption>
-                        </figure>
-                        <figure>
-                            <i class="devicon-linux-plain"></i>
-                            <figcaption>Linux</figcaption>
-                        </figure>
+    <script type="text/javascript" src="app/shared/footer-container/footercontDirective.js"></script>
 
-                        <figure>
-                            <i class="devicon-mysql-plain"></i>
-                            <figcaption>MySQL</figcaption>
-                        </figure>
-                    </div>
-                    <div class="clear"></div>
-                    <div class="skills-and-tools">
-                        <h2 class="sub-title">Currently Exploring</h2>
-                        <figure>
-                            <i class="devicon-python-plain"></i>
-                            <figcaption>Python</figcaption>
-                        </figure>
-                    </div>
-                </div>
-            </div>
+    <script type="text/javascript" src="app/shared/navigation-bar/navbarDirective.js"></script>
+    <script type="text/javascript" src="app/shared/navigation-bar/navbarService.js"></script>
 
-            <div class="clear" id="section_contact"></div>
+    <script type="text/javascript" src="app/components/portfolio/portfolioCtrl.js"></script>
+    <script type="text/javascript" src="app/components/portfolio/portfolioService.js"></script>
 
-            <div class="outer-box">
-                <div class="inner-box">
-                    <div class="contact">
-                        <h2 class="get-in-touch title"> Get in Touch </h2>
-                        <span class="underline"></span>
-                        <p class="textarea">
-                            Have questions about my projects? Would like to see my Resume? Have a project in mind?
-                            Let's connect and build something new.
-                        </p>
-                    </div>
-                </div>
-                <div class="quarter-clear"></div>
-                <div class="inner-box">
-                    <div class="contact-form">
-                        <form id="formId">
-                            <div>
-                                <input class="input name form-text" id="name" name="name" type="text" aria-required="true" placeholder="Name">
-                            </div>
-                            <div>
-                                <input class="input email form-text" id="email" name="_replyto" type="email" aria-required="true" placeholder="E-mail">
-                            </div>
-                            <div class="contact-textarea">
-                                <textarea class="message form-text" id="message" name="body" type="text" aria-required="true" placeholder="Message"></textarea>
-                            </div>
-                            <input hidden type="text" name="_gotcha">
-                            <input hidden name="_subject" value="Subject">
-                            <div>
-                                <p type="hidden" class="status-msg"></p>
-                            </div>
-                            <div>
-                                <button class="button validation-btn" type="submit"><span>Submit </span></button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+    <script type="text/javascript" src="app/components/blog/blogCtrl.js"></script>
+    <script type="text/javascript" src="app/components/blog/blogService.js"></script>
 
-            <div class="half-clear" id="section_four"></div>
+    <script type="text/javascript" src="app/components/timeline/timelineCtrl.js"></script>
+    <script type="text/javascript" src="app/components/timeline/timelineService.js"></script>
 
-            <div class="page-footer">
-                <div class="copyright">
-                    <p>	&copy; Cedric Fadel 2017</p>
-                </div>
-                <footer>
-                    <div class="footer-icons">
-                        <div class="social-icons">
-                            <ul class="social-icon-contact" style="text-align:center;">
-                                <li><a target="_blank" href="https://www.linkedin.com/in/cedricfadel/" class="social-icon-contact"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                <li><a target="_blank" href="https://github.com/cfadel1" class="social-icon-contact"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-                                <li><a target="_blank" href="http://stackoverflow.com/users/6680815/cedric-f" class="social-icon-contact"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a></li>
-                                <li><a target="_blank" href="mailto:cedricfadel@hotmail.com" class="social-icon-contact"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-                                <li><a target="_blank" href="resume.html" class="social-icon-contact"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </footer>
-            </div>
-        </div>
-    </div>
+    <script type="text/javascript" src="app/components/modals/modalCtrl.js"></script>
+    <script type="text/javascript" src="app/components/modals/modalDirective.js"></script>
+    <script type="text/javascript" src="app/components/modals/modalService.js"></script>
 </body>
+
 </html>

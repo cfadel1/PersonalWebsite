@@ -1,0 +1,48 @@
+<!-- Header -->
+<div class="banner" style="background-image:url('../../../assets/img/toronto.jpg')">
+    <div class="banner-overlay banner-overlay-active"></div>
+    <div class="banner-text-wrapper">
+        <h1 class="banner-title">Blog</h1>
+    </div>
+</div>
+
+
+<!-- Icon and Body -->
+<div class="body-wrapper-indent">
+    <div class="banner-icon-wrapper">
+        <div class="banner-icon"></div>
+    </div>
+    <div class="body-wrapper-indent">
+        <div class="content-wrapper">
+            <div ng-controller="BlogCtrl as controller" class="outer-box">
+                <div class="inner-box">
+                    <div class="blog-box">
+                        <div class="left-box blog1">
+                            <br style="clear:both;" />
+                        </div>
+                        <div class="right-box">
+                            <div>
+                                <div class="blog-title">
+                                    <h2>TensorFlow Image Classifier</h2>
+                                </div>
+                                <span class="underline-blog"></span>
+                            </div>
+                            <div class="blog-date">
+                                <i class="fa fa-pencil"></i>
+                                <p>May 19, 2017</p>
+                            </div>
+                            <div class="blog-summary ellipsis">
+                                In the past decade, machine learning has become one of the most researched and discussed topics. Machine Learning helped develop new technologies such as self-driven cars, facial recognition, speech recognition, enhancing web searches and many more. One of the best machine learning libraries used for image classification is Google’s open source library called TensorFlow. In this blog, I will share what I’ve learned as I was researching on TensorFlow’s Image classification.
+                            </div>
+                            <br style="clear:both;" />
+                        </div>
+                        <div class="right-box blog-btn-div">
+                            <button class="button blog-btn" ng-click="clicked()">
+                            <span>Read More </span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

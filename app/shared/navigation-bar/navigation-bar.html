@@ -1,0 +1,15 @@
+<!-- Navigation -->
+<header>
+    <div class="container clearfix">
+        <div id="sidebar">
+            <div id="nav-anchor"></div>
+            <nav>
+                <ul class="menu" ng-repeat="value in menuItems">
+                    <li>
+                        <a ui-sref="{{value.title}}">{{value.title}}</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>

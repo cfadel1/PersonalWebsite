@@ -1,0 +1,85 @@
+<!-- Header -->
+<div class="banner" style="background-image:url('../../../assets/img/toronto.jpg')">
+    <div class="banner-overlay banner-overlay-active"></div>
+    <div class="banner-text-wrapper">
+        <h1 class="banner-title">Timeline</h1>
+    </div>
+</div>
+
+
+<!-- Icon and Body -->
+<div class="body-wrapper-indent">
+    <div class="banner-icon-wrapper">
+        <div class="banner-icon"></div>
+    </div>
+    <!-- Icon and Body -->
+    <div class="body-wrapper-indent">
+
+        <div class="content-wrapper">
+            <div ng-controller="PortfolioCtrl as controller" class="outer-box">
+
+                <div class="inner-box">
+                    <div class="blog-box">
+                        <div class="left-box project1">
+                            <br style="clear:both;" />
+                        </div>
+                        <div class="right-box">
+                            <div>
+                                <a target="_blank" href="https://github.com/cfadel1/TensorFlow-ImageClassifier" class="social-icon-header">
+                                    <div class="project-title">
+                                        <h2>MNIST Image Classifier</h2>
+                                        <ul class="project-link">
+                                            <li>
+                                                <i class="fa fa-github" aria-hidden="true"></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <span class="underline-project"></span>
+                                </a>
+                            </div>
+                            <div class="project-summary ellipsis">
+                                Wrote a Python script that trains a neural network using TensorFlow. This project was completed with the purpose of enhancing my knowledge of Machine Learning. For more information, check out the blog on <a href="blog.html" class="blog-link">TensorFlow's Image Classifier</a>.
+                            </div>
+                            <div class="half-clear"></div>
+                            <p>
+                                <u class="project-languages">Implemented Using:</u> Python, TensorFlow Library
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div ng-repeat="project in projects" class="inner-box">
+                    <div class="clear"></div>
+                    <div class="clear"></div>
+                    <div class="blog-box">
+                        <div class="left-box {{project.projectId}}">
+                            <br style="clear:both;" />
+                        </div>
+                        <div class="right-box">
+                            <div>
+                                <a target="_blank" href="{{ project.githubUrl}}" class="social-icon-header">
+                                    <div class="project-title">
+                                        <h2>{{project.title}}</h2>
+                                        <ul class="project-link">
+                                            <li>
+                                                <i class="fa fa-github" aria-hidden="true"></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <span class="underline-project"></span>
+                                </a>
+                            </div>
+                            <div class="project-summary project-ellipsis">
+                                {{project.description}}
+                            </div>
+                            <div class="half-clear"></div>
+                            <p>
+                                <u class="project-languages">Implemented Using:</u> {{project.languages}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

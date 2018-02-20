@@ -1,0 +1,82 @@
+﻿<!-- Header -->
+<div class="banner" style="background-image:url('../../../assets/img/toronto.jpg')">
+    <div class="banner-overlay banner-overlay-active"></div>
+    <div class="banner-text-wrapper">
+        <h1 class="banner-title">Timeline</h1>
+    </div>
+</div>
+
+<!-- Icon and Body -->
+<div class="body-wrapper-indent" ng-controller="TimelineCtrl as controller">
+    <div class="banner-icon-wrapper">
+        <div class="banner-icon"></div>
+    </div>
+    <blockquote>
+        "You can’t connect the dots looking forward; you can only connect them looking backwards. So you have to trust that the dots will somehow connect in your future."
+        <cite>Steve Jobs</cite>
+    </blockquote>
+
+    <!--Terms-->
+    <ul class="timeline">
+        <li ng-repeat="term in terms">
+            <div ng-class-even="'direction-l'" ng-class-odd="'direction-r'">
+                <div class="flag-wrapper">
+                    <span class="hexa"></span>
+                    <span class="flag">{{term.position}}</span>
+                    <span class="time-wrapper"><span class="time">{{term.date}}</span></span>
+                </div>
+                <div class="desc">
+                    <div class="text">
+                        {{term.description}}
+                    </div>
+                    <div class="btn-more">
+                        <button class="btn" ng-click="vm.openModal('{{term.termNumb}}')"><span>{{term.btnLabel}}</span></button>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <!-- MODALS -->
+    <!-- COOP -->
+    <modal ng-repeat="coopTerm in coopTerms" id="{{coopTerm.term}}">
+        <div class="modal">
+            <div class="modal-body detailview-modal-body">
+                <button ng-click="vm.closeModal('{{coopTerm.term}}');">x</button>
+                <div class="detailedView">
+                    <div class="modal-title">Overview</div>
+                    <div class="modal-courses">
+                        <div ng-repeat="desciption in coopTerm.descriptions">{{desciption}}</div>
+                    </div>
+                    <div class="modal-title">Tools/Languages</div>
+                    <div class="modal-courses">
+                        <div class="modal-languages" ng-repeat="language in coopTerm.languages">{{language}}&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-background"></div>
+    </modal>
+
+    <!-- University -->
+    <modal ng-repeat="studyTerm in studyTerms" id="{{studyTerm.term}}">
+        <div class="modal">
+            <div class="modal-body detailview-modal-body">
+                <button ng-click="vm.closeModal('{{studyTerm.term}}');">x</button>
+                <div class="detailedView">
+                    <div class="modal-title">Courses</div>
+                    <div class="modal-courses">
+                        <div class="course">
+                            <div ng-repeat="courses in studyTerm.courses" class="course">
+                                <div class="course-code">{{courses.code}}</div>
+                                <div class="course-dash">-</div>
+                                <div class="course-description">{{courses.description}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-background"></div>
+    </modal>
+</div>
