@@ -6,67 +6,67 @@ angular.module('myAppTimelineService', [])
                     {
                         position: 'Computer Engineering',
                         date: 'Jan 2018',
-                        description: 'Started the second term of my third year in Computer Engineering at the University of Waterloo.',
+                        description: 'Second term of my third year in Computer Engineering at the University of Waterloo',
                         termNumb: '3B',
                         btnLabel: 'View Courses'
                     }, {
                         position: 'Software Engineer - NVIDIA',
                         date: 'Sept 2017',
-                        description: 'Started my fifth internship as a Software Engineer on the Data Platform Team',
+                        description: 'Fifth internship as a Software Engineer on the Data Platform Team',
                         termNumb: 'COOP5',
                         btnLabel: 'More Details'
                     }, {
                         position: 'Computer Engineering',
                         date: 'May 2017',
-                        description: 'Started the first term of my third year in Computer Engineering at the University of Waterloo.',
+                        description: 'First term of my third year in Computer Engineering at the University of Waterloo',
                         termNumb: '3A',
                         btnLabel: 'View Courses'
                     }, {
                         position: 'Full Stack Developer - BDO',
                         date: 'Jan 2017',
-                        description: 'Started my fourth internship as a Microsoft Full Stack Developer',
+                        description: 'Fourth internship as a Microsoft Full Stack Developer',
                         termNumb: 'COOP4',
                         btnLabel: 'More Details'
                     }, {
                         position: 'Computer Engineering',
                         date: 'Sept 2016',
-                        description: 'Started the second term of my second year in Computer Engineering at the University of Waterloo.',
+                        description: 'Second term of my second year in Computer Engineering at the University of Waterloo',
                         termNumb: '2B',
                         btnLabel: 'View Courses'
                     }, {
                         position: 'Software Developer - MedAvail',
                         date: 'May 2016',
-                        description: 'Started my third internship as a Software Developer',
+                        description: 'Third internship as a Software Developer',
                         termNumb: 'COOP3',
                         btnLabel: 'More Details'
                     }, {
                         position: 'Computer Engineering',
                         date: 'Jan 2016',
-                        description: 'Started the first term of my second year in Computer Engineering at the University of Waterloo.',
+                        description: 'First term of my second year in Computer Engineering at the University of Waterloo',
                         termNumb: '2A',
                         btnLabel: 'View Courses'
                     }, {
                         position: 'Quality Assurance - MedAvail',
                         date: 'Sept 2015',
-                        description: 'Started my second internship as a Quality Assurance',
+                        description: 'Second internship as a Quality Assurance',
                         termNumb: 'COOP2',
                         btnLabel: 'More Details'
                     }, {
                         position: 'Computer Engineering',
                         date: 'May 2015',
-                        description: 'Started the second term of my first year in Computer Engineering at the University of Waterloo.',
+                        description: 'Second term of my first year in Computer Engineering at the University of Waterloo',
                         termNumb: '1B',
                         btnLabel: 'View Courses'
                     }, {
                         position: 'Project Coordinator - TJX',
                         date: 'Jan 2015',
-                        description: 'Started my first internship as a Project Coordinator for the Systems Implementation Team',
+                        description: 'First internship as a Project Coordinator for the Systems Implementation Team',
                         termNumb: 'COOP1',
                         btnLabel: 'More Details'
                     }, {
                         position: 'Computer Engineering',
                         date: 'Sept 2014',
-                        description: 'Started the first term of my first year in Computer Engineering at the University of Waterloo.',
+                        description: 'First term of my first year in Computer Engineering at the University of Waterloo',
                         termNumb: '1A',
                         btnLabel: 'View Courses'
                     }
@@ -93,7 +93,7 @@ angular.module('myAppTimelineService', [])
                                 "- Improved the front-end performance by implementing AngularJS"
                         ],
                         languages: [
-                                'ASP.Net MVC5', 'C#', 'SQL', 'JavaScript', 'AngularJS', 'HTML5', 'CSS3'
+                                'C#, ', 'SQL, ', 'JavaScript, ', 'AngularJS, ', 'HTML5, ', 'CSS3, ', 'ASP.Net MVC5'
                         ]
                     }, {
                         term: 'COOP3',
@@ -102,7 +102,7 @@ angular.module('myAppTimelineService', [])
                                 "- Created .msi installers with WIX to accelerate the installation of web-services by 150%"
                         ],
                         languages: [
-                                'ASP.Net MVC5', 'C#', 'SQL', 'JavaScript', 'HTML5', 'CSS3'
+                                'C#, ', 'SQL, ', 'JavaScript, ', 'HTML5, ', 'CSS3, ', 'XML, ', 'WIX, ', 'ASP.Net MVC5'
                         ]
                     }, {
                         term: 'COOP2',
@@ -113,7 +113,7 @@ angular.module('myAppTimelineService', [])
                                 "- Developed a C# Windows Configuration Verification Application which accelerated build deployment by 35%"
                         ],
                         languages: [
-                                'C#', 'Coded-UI', 'Windows Application', 'Selenium', 'Python'
+                                'C#, ', 'Python, ', 'Coded-UI, ', 'Selenium, ', 'Windows Application'
                         ]
                     }, {
                         term: 'COOP1',
@@ -123,7 +123,7 @@ angular.module('myAppTimelineService', [])
                                 "- Successfully communicated with vendors, construction team and customers in French and English"
                         ],
                         languages: [
-                                'Adobe', 'Office 365', 'SharePoint'
+                                'Adobe, ', 'Office 365, ', 'SharePoint, '
                         ]
                     }
                 ];
@@ -147,8 +147,8 @@ angular.module('myAppTimelineService', [])
                                 code: "ECE 390",
                                 description: "Engineering Design, Economics, and Impact on Society"
                                 }, {
-                                code: "ECON 101",
-                                description: "Introduction to Microeconomics"
+                                code: "CHEM 123",
+                                description: "Chemical Reactions, Equilibria and Kinetics"
                                 }
                             ],
                     }, {

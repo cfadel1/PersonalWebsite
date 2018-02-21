@@ -235,6 +235,7 @@ header p {
 
 .text {
     margin-bottom: 30px;
+    font-size: 13px;
 }
 
 .btn-more {
@@ -263,25 +264,37 @@ blockquote cite:before {
     content: "\2014 \2009";
 }
 
-.course {}
+.course {
+    font-size: 14px;
+    width: 100%;
+}
 
 .course-description {
     display: inline-block;
-    width: 445px;
-    margin-left: 10px;
+    width: 83%;
 }
 
 .course-dash {
     display: inline-block;
+    width: 2%;
 }
 
 .course-code {
     display: inline-block;
-    width: 90px;
+    width: 13%;
 }
 
 .modal-languages {
     display: inline-block;
+}
+
+.modal-courses {
+    font-size: 13px;
+}
+
+.modal-title {
+    font-size: 17px;
+    margin: 10px 0 5px 0;
 }
 
 @media(min-width: 768px) {
@@ -395,5 +408,27 @@ blockquote cite:before {
         width: 585px;
         float: right;
         text-align: left;
+    }
+}
+
+@media(max-width: 768px) {
+    .course {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .course-description {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .course-dash {
+        display: none;
+    }
+
+    .course-code {
+        display: block;
+        width: 100%;
     }
 }

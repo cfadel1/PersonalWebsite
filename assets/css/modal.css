@@ -66,8 +66,3 @@ modal button:hover {
 body.modal-open {
     overflow: hidden;
 }
-
-.modal-title {
-    font-size: 23px;
-    margin: 10px 0;
-}
