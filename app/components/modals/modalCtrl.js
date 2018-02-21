@@ -8,11 +8,13 @@ angular.module('myApp')
 
         function initController() {}
 
-        function openModal(id) {
+        function openModal() {
+            var id = event.currentTarget.id;
             modalService.Open(id);
         }
 
-        function closeModal(id) {
+        function closeModal() {
+            var id = event.currentTarget.id;
             modalService.Close(id);
         }
     });

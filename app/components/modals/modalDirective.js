@@ -31,8 +31,7 @@ angular.module('myApp')
 
                 // remove self from modal service when directive is destroyed
                 scope.$on('$destroy', function () {
-                    modalService.Remove(attrs.id);
-                    element.remove();
+                    $('modal').remove();
                 });
 
                 // open modal

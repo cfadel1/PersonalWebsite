@@ -19,7 +19,7 @@
     <!--Terms-->
     <ul class="timeline">
         <li ng-repeat="term in terms">
-            <div ng-class-even="'direction-l'" ng-class-odd="'direction-r'">
+            <div ng-class-even="'direction-l'" ng-class-odd="'direction-r'" ng-controller="modalCtrl as vm">
                 <div class="flag-wrapper">
                     <span class="hexa"></span>
                     <span class="flag">{{term.position}}</span>
@@ -29,8 +29,8 @@
                     <div class="text">
                         {{term.description}}
                     </div>
-                    <div class="btn-more">
-                        <button class="btn" ng-click="vm.openModal('{{term.termNumb}}')"><span>{{term.btnLabel}}</span></button>
+                    <div class="btn-more" data-ng-init="btnId='{{term.termNumb}}';">
+                        <button data-ng-attr-id="{{term.termNumb}}" class="btn" ng-click="vm.openModal()"><span>{{term.btnLabel}}</span></button>
                     </div>
                 </div>
             </div>
@@ -41,8 +41,8 @@
     <!-- COOP -->
     <modal ng-repeat="coopTerm in coopTerms" id="{{coopTerm.term}}">
         <div class="modal">
-            <div class="modal-body detailview-modal-body">
-                <button ng-click="vm.closeModal('{{coopTerm.term}}');">x</button>
+            <div class="modal-body detailview-modal-body" init="btnId='{{coop.term}}';">
+                <button data-ng-attr-id="{{coop.term}}" ng-click="vm.closeModal('{{coopTerm.term}}');">x</button>
                 <div class="detailedView">
                     <div class="modal-title">Overview</div>
                     <div class="modal-courses">
@@ -61,8 +61,8 @@
     <!-- University -->
     <modal ng-repeat="studyTerm in studyTerms" id="{{studyTerm.term}}">
         <div class="modal">
-            <div class="modal-body detailview-modal-body">
-                <button ng-click="vm.closeModal('{{studyTerm.term}}');">x</button>
+            <div class="modal-body detailview-modal-body" init="btnId='{{studyTerm.term}}';">
+                <button data-ng-attr-id="{{studyTerm.term}}" ng-click="vm.closeModal('{{studyTerm.term}}');">x</button>
                 <div class="detailedView">
                     <div class="modal-title">Courses</div>
                     <div class="modal-courses">

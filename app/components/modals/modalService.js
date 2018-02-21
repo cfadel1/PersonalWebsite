@@ -4,7 +4,6 @@ angular.module('myApp')
 
         var service = {
             Add: Add,
-            Remove: Remove,
             Open: Open,
             Close: Close
         }
@@ -12,12 +11,7 @@ angular.module('myApp')
         function Add(modal) {
             modals.push(modal);
         }
-
-        function Remove(id) {
-            var modalToRemove = FindWhere(id);
-            modals = Without(modals, modalToRemove);
-        }
-
+        
         function Open(id) {
             var modal = FindWhere(id);
             modal.open();
