@@ -474,6 +474,15 @@ figcaption {
     position: relative;
 }
 
+.project5 {
+    background-image: url(../img/caeser_cipher.jpg);
+    background-position: 50% 35%;
+    background-repeat: no-repeat;
+    background-size: 70% 90%;
+    height: 220px;
+    position: relative;
+}
+
 /*Contact Form*/
 
 .contact {
@@ -502,7 +511,7 @@ figcaption {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     color: #184276;
-    font-size: 0.8em;
+    font-size: 17px;
     width: 100%;
 }
 
@@ -512,7 +521,7 @@ figcaption {
     border-left: none;
     border-right: none;
     border-top: none;
-    font-size: 22px !important;
+    font-size: 20px !important;
     font-weight: 600;
     outline: none;
 }
@@ -865,7 +874,7 @@ hr:before {
 }
 
 .blog-title {
-    font-size: 0.75em;
+    font-size: 16px;
 }
 
 .blog-text {
@@ -1153,7 +1162,8 @@ hr:before {
     .project1,
     .project2,
     .project3,
-    .project4 {
+    .project4,
+    .project5 {
         width: 100%;
     }
 
@@ -1305,6 +1315,11 @@ hr:before {
         height: 150px;
     }
 
+    .project5 {
+        background-size: 50% 100%;
+        height: 150px;
+    }
+
     .blog {
         background-size: 65% 100%;
         height: 150px;
@@ -1332,6 +1347,15 @@ hr:before {
     .maxPoolingPic {
         height: 200px;
         background-size: 65% 90%;
+    }
+
+    .blog-title {
+        font-size: 0.75em;
+    }
+
+    .contact-form .input,
+    .contact-form textarea {
+        font-size: 13px;
     }
 
 }

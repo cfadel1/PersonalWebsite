@@ -20,7 +20,13 @@ angular.module('myAppPortfolioService', [])
                         githubUrl: 'https://github.com/cfadel1/Stocks_To_Date',
                         title: 'Stocks to Date',
                         description: 'Dynamic information interface windows application that fetches the current price in Canadian Dollars of currencies such as Gold, US Dollar and European Euro.',
-                        languages: 'C#, Yahoo Finance'
+                        languages: 'C#, Yahoo Finance, WinForms'
+    			}, {
+                        projectId: 'project5',
+                        githubUrl: 'https://github.com/cfadel1/Caesar_Cipher',
+                        title: 'Caeser Cipher',
+                        description: 'Windows Application that encodes and decodes messages securily using Caesar Cipher.',
+                        languages: 'C#, WinForms'
     			}
 			];
                 return projects;
