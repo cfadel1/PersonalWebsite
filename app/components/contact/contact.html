@@ -48,3 +48,58 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    $('.validation-btn').on('click', function(e) {
+        var name = $('.name').val();
+        var email = $('.email').val();
+        var msg = $('.message').val();
+
+        if (name == "" || name == null, email == "" || email == null, msg == "" || msg == null) {
+            $('.status-msg').text("Please Fill All Fields");
+            $('.status-msg').css("color", "red");
+            $('.status-msg').show();
+            return false;
+        } else if (!validateEmail(email)) {
+            $('.status-msg').text("Please Enter A Valid Email");
+            $('.status-msg').css("color", "red");
+            $('.status-msg').show();
+            return false;
+        } else {
+            $('#formId').submit();
+        }
+    });
+
+    var $contactForm = $('#formId');
+    $contactForm.submit(function(e) {
+        e.preventDefault();
+        $.ajax({
+            url: '//formspree.io/cedricfadel@hotmail.com',
+            method: 'POST',
+            data: $('#formId').serialize(),
+            dataType: 'json',
+            beforeSend: function() {
+                $('.status-msg').text("Sending Message");
+                $('.status-msg').css("color", "blue");
+                $('.status-msg').show();
+            },
+            success: function(data) {
+                $('.status-msg').text("Message Sent");
+                $('.status-msg').css("color", "blue");
+                $('.status-msg').show();
+            },
+            error: function(err) {
+                $('.status-msg').text("Error sending message, Please try again");
+                $('.status-msg').css("color", "red");
+                $('.status-msg').show();
+            }
+        });
+    });
+
+    function validateEmail(email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }
+
+</script>
