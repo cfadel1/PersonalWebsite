@@ -37,12 +37,14 @@ angular.module('myApp')
                 // open modal
                 function Open() {
                     element.show();
+                    $('.' + element[0].className).css('display', 'inline-block');
                     $('body').addClass('modal-open');
                 }
 
                 // close modal
                 function Close() {
                     element.hide();
+                    $('.' + element[0].className).css('display', 'none');
                     $('body').removeClass('modal-open');
                 }
 

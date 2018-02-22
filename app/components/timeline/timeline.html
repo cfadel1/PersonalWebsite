@@ -39,7 +39,7 @@
 
     <!-- MODALS -->
     <!-- COOP -->
-    <modal ng-repeat="coopTerm in coopTerms" id="{{coopTerm.term}}">
+    <modal ng-repeat="coopTerm in coopTerms" class="{{coopTerm.term}}" id="{{coopTerm.term}}">
         <div class="modal">
             <div class="modal-body detailview-modal-body" init="btnId='{{coop.term}}';">
                 <button data-ng-attr-id="{{coop.term}}" ng-click="vm.closeModal('{{coopTerm.term}}');">x</button>
@@ -59,7 +59,7 @@
     </modal>
 
     <!-- University -->
-    <modal ng-repeat="studyTerm in studyTerms" id="{{studyTerm.term}}">
+    <modal ng-repeat="studyTerm in studyTerms" class="{{studyTerm.term}}" id="{{studyTerm.term}}">
         <div class="modal">
             <div class="modal-body detailview-modal-body" init="btnId='{{studyTerm.term}}';">
                 <button data-ng-attr-id="{{studyTerm.term}}" ng-click="vm.closeModal('{{studyTerm.term}}');">x</button>
