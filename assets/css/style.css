@@ -1,5 +1,3 @@
-/*@import url("https://fonts.googleapis.com/css?family=Montserrat");*/
-
 @font-face {
     font-family: GalanoBold;
     src: url('../fonts/Galano-Bold.otf') format("opentype");
@@ -646,6 +644,7 @@ footer li {
 .copyright {
     padding-top: 0.8em;
     text-align: center;
+    font-family: 'MontserratRegular';
 }
 
 /*Social Icons*/

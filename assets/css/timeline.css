@@ -1,18 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,900);
-
-
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
-
-@font-face {
-    /*
-    font-family: GalanoBold;
-    src: url("fonts/Galano-Bold.otf") format("opentype");
-*/
-}
-
-
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'MontserratRegular', sans-serif;
     color: #333;
 }
 
