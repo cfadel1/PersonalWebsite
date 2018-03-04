@@ -431,7 +431,8 @@ figcaption {
 .project1,
 .project2,
 .project3,
-.project4 {
+.project4,
+.blog1 {
     background-repeat: no-repeat;
     position: relative;
     width: 50%;
@@ -479,6 +480,15 @@ figcaption {
     background-position: 50% 35%;
     background-repeat: no-repeat;
     background-size: 70% 90%;
+    height: 220px;
+    position: relative;
+}
+
+.blog1 {
+    background-image: url(../img/blog1.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 100% 90%;
     height: 220px;
     position: relative;
 }
@@ -1163,7 +1173,8 @@ hr:before {
     .project2,
     .project3,
     .project4,
-    .project5 {
+    .project5,
+    .blog1 {
         width: 100%;
     }
 
@@ -1320,7 +1331,7 @@ hr:before {
         height: 150px;
     }
 
-    .blog {
+    .blog1 {
         background-size: 65% 100%;
         height: 150px;
     }

@@ -6,5 +6,5 @@ angular.module('myAppBlogCtrl', [])
             window.location.replace("#/Cnn");
         }
 
-        $scope.blogs = blogContent.getBlogs();
+//        $scope.blogs = blogContent.getBlogs();
 }]);
