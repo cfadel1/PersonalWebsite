@@ -1,8 +1,13 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
+/*@import url("https://fonts.googleapis.com/css?family=Montserrat");*/
 
 @font-face {
     font-family: GalanoBold;
     src: url('../fonts/Galano-Bold.otf') format("opentype");
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url('../fonts/Montserrat-Black.otf') format("opentype");
 }
 
 /*Main*/
