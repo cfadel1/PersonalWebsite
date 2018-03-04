@@ -137,7 +137,7 @@ angular.module('myAppTimelineService', [])
                         courses: [
                             {
                                 code: "ECE 318",
-                                description: "Analog and Digital Commun"
+                                description: "Analog and Digital Communication"
                                 }, {
                                 code: "ECE 356",
                                 description: "Database Systems"
