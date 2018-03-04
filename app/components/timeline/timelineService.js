@@ -78,11 +78,12 @@ angular.module('myAppTimelineService', [])
                     {
                         term: 'COOP5',
                         descriptions: [
-                                "- Managed and coordinated the systems aspects for all new stores in a timely manner",
-                                "- Communicated with vendors, construction team and customers in French and English"
+                                "- Designed and implemented a Data Health Monitoring Platform for exis ng data pipelines",
+                                "- Built front end experience using primarily D3.js and AngularJs for tree representation of the key performance indicators",
+                                "- Built backend services that interacts with data pipeline components to fetch and store data using Java Spring framework and Postgres"
                             ],
                         languages: [
-                                "Microsoft"
+                                "Java, JavaScript, TypeScript, Postgres, CSS, HTML, AngularJS"
                         ]
                     }, {
                         term: 'COOP4',
