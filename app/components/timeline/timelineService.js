@@ -5,6 +5,18 @@ angular.module('myAppTimelineService', [])
                 var terms = [
                     {
                         position: 'Computer Engineering',
+                        date: 'Mai 2018',
+                        description: 'First term of my fourth year in Computer Engineering at the University of Waterloo',
+                        termNumb: '4A',
+                        btnLabel: 'View Courses'
+                    }, {
+                        position: 'Research Assistant',
+                        date: 'Jan 2018',
+                        description: 'Research assistance on the topic of Euthereum Smart Contracts Security Vulnerabilities',
+                        termNumb: 'COOP6',
+                        btnLabel: 'View Details'
+                    }, {
+                        position: 'Computer Engineering',
                         date: 'Jan 2018',
                         description: 'Second term of my third year in Computer Engineering at the University of Waterloo',
                         termNumb: '3B',
@@ -76,6 +88,15 @@ angular.module('myAppTimelineService', [])
             getCoopTerms: function () {
                 var coopTerms = [
                     {
+                        term: 'COOP6',
+                        descriptions: [
+                                "- Worked under Professor Vijay Ganesh in research and development",
+                                "- Presented monthly research findings to the faculty"
+                            ],
+                        languages: [
+                                "Smart Contracts, BlockChain, Solidity"
+                        ]
+                    }, {
                         term: 'COOP5',
                         descriptions: [
                                 "- Designed and implemented a Data Health Monitoring Platform for existing data pipelines",
@@ -133,6 +154,26 @@ angular.module('myAppTimelineService', [])
             getStudyTerms: function () {
                 var studyTerms = [
                     {
+                        term: '4A',
+                        courses: [
+                            {
+                                code: "ECE 454",
+                                description: "Distributed Computing"
+                                }, {
+                                code: "ECE 458",
+                                description: "Computer Security"
+                                }, {
+                                code: "ECE 498A",
+                                description: "Engineering Design Project"
+                                }, {
+                                code: "FR 151",
+                                description: "Basic French 1"
+                                }, {
+                                code: "PHIL 390",
+                                description: "Critical Thinking"
+                                }
+                            ],
+                    }, {
                         term: '3B',
                         courses: [
                             {
