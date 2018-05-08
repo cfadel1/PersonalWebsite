@@ -19,6 +19,14 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             url: '/Cnn',
             templateUrl: 'app/components/blog/cnn.html'
         })
+        .state('Ethereum', {
+            url: '/Ethereum',
+            templateUrl: 'app/components/blog/ethereum.html'
+        })
+        .state('Ethereum_1', {
+            url: '/Ethereum_Security_1',
+            templateUrl: 'app/components/blog/ethereum_security_1.html'
+        })
         .state('Timeline', {
             url: '/Timeline',
             templateUrl: 'app/components/timeline/timeline.html'

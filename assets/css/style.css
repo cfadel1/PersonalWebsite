@@ -37,6 +37,27 @@ img {
     width: 100%;
 }
 
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 5px;
+    text-align: center;
+}
+
+.levelTable {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-top: 15px;
+}
+
 /*Links*/
 
 a {
@@ -487,8 +508,26 @@ figcaption {
     position: relative;
 }
 
-.blog1 {
+.cnn {
     background-image: url(../img/blog1.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 100% 90%;
+    height: 220px;
+    position: relative;
+}
+
+.ethereum {
+    background-image: url(../img/ethereum.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 100% 90%;
+    height: 220px;
+    position: relative;
+}
+
+.ethereum1 {
+    background-image: url(../img/blockchain.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: 100% 90%;
@@ -884,7 +923,7 @@ hr:before {
 
 .left-box {
     float: left;
-    width: 30%;
+    width: 29%;
 }
 
 .blog-title {
@@ -926,9 +965,20 @@ hr:before {
     font: 14px 'MontserratRegular', sans-serif;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 55px;
     opacity: 0.95;
     width: 90%;
+}
+
+.cnn-blog h2 {
+    margin-top: 15px;
+}
+
+.cnn-blog h3 {
+    margin-top: 10px;
+}
+
+.cnn-blog h4 {
+    margin-top: 10px;
 }
 
 .cnn-blog div {
@@ -938,6 +988,8 @@ hr:before {
 
 .cnn-blog ul {
     list-style-type: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .cnn-blog ul li {
@@ -970,14 +1022,12 @@ hr:before {
     content: '';
 }
 
-.convolutionalPic,
-.featuremapPic,
-.imgclassificationpPic,
-.maxPoolingPic {
+.blogPic {
     background-position: 50% 50%;
     background-repeat: no-repeat;
     position: relative;
     z-index: 2;
+    margin-top: 15px;
 }
 
 .convolutionalPic {
@@ -1004,13 +1054,39 @@ hr:before {
     height: 35vh;
 }
 
+.blockchainPic {
+    background-image: url('../img/blockchain2.png');
+    background-size: 35vw 35vh;
+    height: 35vh;
+}
+
+.smartContractPic {
+    background-image: url('../img/smartcontract.png');
+    background-size: 35vw 35vh;
+    height: 35vh;
+}
+
+.reentrancyPic {
+    background-image: url('../img/re-entrancy.png');
+    background-size: 55vw 17vh;
+    height: 19vh;
+}
+
+.exceptionDisorderPic {
+    background-image: url('../img/exception_disorder.png');
+    background-size: 35vw 8vh;
+    height: 10vh;
+}
+
 .figure-source {
     text-align: center !important;
+    margin-bottom: 15px;
 }
 
 .date-written {
     font-size: 18px;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .blog-date {
@@ -1241,6 +1317,10 @@ hr:before {
         height: 20px;
     }
 
+    .begin-blog {
+        height: 55px;
+    }
+
     .loader-effect {
         height: 6em;
         width: 6em;
@@ -1338,6 +1418,7 @@ hr:before {
     .blog1 {
         background-size: 65% 100%;
         height: 150px;
+        margin-bottom: 10px;
     }
 
     .blog-summary {
@@ -1362,6 +1443,26 @@ hr:before {
     .maxPoolingPic {
         height: 200px;
         background-size: 65% 90%;
+    }
+
+    .blockchainPic {
+        height: 200px;
+        background-size: 65% 90%;
+    }
+
+    .smartContractPic {
+        height: 200px;
+        background-size: 100% 100%;
+    }
+
+    .reentrancyPic {
+        height: 100px;
+        background-size: 85% 100%;
+    }
+
+    .exceptionDisorderPic {
+        height: 56px;
+        background-size: 90% 100%;
     }
 
     .blog-title {

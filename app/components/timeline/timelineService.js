@@ -5,7 +5,7 @@ angular.module('myAppTimelineService', [])
                 var terms = [
                     {
                         position: 'Computer Engineering',
-                        date: 'Mai 2018',
+                        date: 'May 2018',
                         description: 'First term of my fourth year in Computer Engineering at the University of Waterloo',
                         termNumb: '4A',
                         btnLabel: 'View Courses'

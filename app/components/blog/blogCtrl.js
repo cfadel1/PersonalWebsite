@@ -2,9 +2,15 @@ angular.module('myAppBlogCtrl', [])
 
     .controller('BlogCtrl', ['$scope', 'blogContent', function ($scope, blogContent) {
 
-        $scope.clicked = function () {
+        $scope.gocnn = function () {
             window.location.replace("#/Cnn");
         }
 
-//        $scope.blogs = blogContent.getBlogs();
+        $scope.goethereum = function () {
+            window.location.replace("#/Ethereum");
+        }
+
+        $scope.goethereum1 = function () {
+            window.location.replace("#/Ethereum_Security_1");
+        }
 }]);

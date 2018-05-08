@@ -1,0 +1,216 @@
+﻿<div class="begin-blog"></div>
+<div class="body-wrapper-indent">
+    <div class="content-wrapper">
+        <div class="outer-box">
+            <div class="cnn-blog">
+                <h1>Ethereum Smart Contracts Security Vulnerabilities</h1>
+                <div class="date-written">May 5, 2018</div>
+                <div>
+                    The purpose of this blog is to describe some of Ethereum smart contract security vulnerabilities mainly related to solidity. It is recommended to read the blog on Ethereum contracts before proceeding. In addition, a good understanding of the solidity programming language will help with the understanding of the concepts. A good tutorial to quickly learn Solidity is called <a class="blog-link" target="_blank" href="https://cryptozombies.io/"> CryptoZombies</a> by Loom Network.
+                </div>
+
+                <h2>Introduction</h2>
+                <div>
+                    The main resources used for the development of this blog is a paper written by Ardit Dika entitled "Ethereum Smart Contracts: Security Vulnerabilities and Security Tools" and a paper by Nicol Atzei, Massimo Bartoletti and Tiziana Cimoli entitled "A survey of attacks on Ethereum smart contracts". The examples and the code snippets used below are taken from the paper "A survey of attacks on Ethereum smart contracts".
+                </div>
+
+                <h2>Level of attacks</h2>
+                <div>
+                    Below are some vulnerabilities that have an impact on the security of smart contracts. These vulnerabilities are divided into three levels, the Solidity programming language, the Ethereum virtual machine and the blockchain technology. In this blog, we will discuss the vulnerabilities of the first two levels.
+                    <table class="levelTable">
+                        <tr>
+                            <th>Level</th>
+                            <th>Cause of vulnerability</th>
+                        </tr>
+                        <tr>
+                            <th rowspan="6">Solidity</th>
+                            <td>Call to the unkonwn</td>
+                        </tr>
+                        <tr>
+                            <td>Gasless send</td>
+                        </tr>
+                        <tr>
+                            <td>Exception disorder</td>
+                        </tr>
+                        <tr>
+                            <td>Type casts</td>
+                        </tr>
+                        <tr>
+                            <td>Re-entrancy</td>
+                        </tr>
+                        <tr>
+                            <td>Keeping secrets</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="3">EVM</th>
+                            <td>Immutable bugs</td>
+                        </tr>
+                        <tr>
+                            <td>Ether lost in transfer</td>
+                        </tr>
+                        <tr>
+                            <td>Stack size limit</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="3">Blogchain</th>
+                            <td>Unpredictable state</td>
+                        </tr>
+                        <tr>
+                            <td>Generating randomness</td>
+                        </tr>
+                        <tr>
+                            <td>Time constraints</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <h2>Solidity</h2>
+                <div>
+                    As mentioned in the previous blog, Solidity is a contract-oriented programming language for writing smart contracts. In this section, we will discuss the security vulnerabilities of Ethereum smart contracts caused by Solidity.
+                </div>
+
+                <h3>Call to the unknown</h3>
+                <div>
+                    Some of the functions used in Solidity to transfer ether have some ambiguous side effects of invoking the callee’s or the recipient fallback function. Below is an example of three of these functions:
+                    <ul>
+                        <li>call()</li>
+                        <li>send()</li>
+                        <li>delegatecall()</li>
+                    </ul>
+                </div>
+
+                <h4>call()</h4>
+                <div>
+                    This function is used to invoke another function of another contract to transfer ether to the callee. The issue with this call is that if the invoked function has a signature that does not exist then the callee's function is executed.
+                </div>
+
+                <h4>send()</h4>
+                <div>
+                    The send() function is similar to the call() function as it also transfers ether to some recipient. Both call the fallback function, but their execution uses a different amount of gas. Recall from the previous blog, gas is the price of ether required to execute an instruction. They both use the call() opcode of the EVM, the difference is that the send function passes 0 as the gas argument. Having said so, the send function uses the hardcoded stipend of 2300 gas which is enough to send ether but also enough to do one additional operation in the fallback function. However, the operation has to be small and cannot include any of the following operations:
+                    <ul>
+                        <li>Writing to storage</li>
+                        <li>Creating a contract</li>
+                        <li>Calling an external function which consumes a large amount of gas</li>
+                        <li>Sending Ether</li>
+                    </ul>
+                </div>
+
+                <h4>delegatecall() </h4>
+                <div>
+                    This function is also similar to the call function. The difference is that the invocation of the called function is run on the caller environment. This means, if you use the "this" keyword, then it will refer to the caller's address and not the callee's address.
+                </div>
+
+                <h3>Exception disorders</h3>
+                <div>
+                    There are three ways exceptions may be raised in Solidity.
+                    <ul>
+                        <li>The execution runs out of gas</li>
+                        <li>The call stack reaches its limit</li>
+                        <li>The command throw is executed</li>
+                    </ul>
+                    The issue with Solidity is that it does not handle all exceptions the same way. Different executions are handled differently. Let's look at the example below:
+                </div>
+
+                <div class="exceptionDisorderPic blogPic"></div>
+                <div class="figure-source">Figure 1: Exception Disorder Example. Source [1]</div>
+
+                <div>
+                    There are two possible scenarios:
+                    <ul>
+                        <li>Some user invokes Bob's pong</li>
+                        <li>Bob invokes ping via a call</li>
+                    </ul>
+                    In the first case, if Alice's ping throws an exception, then the execution stops and the side effects of the whole transactions are reverted. This means at the end of this transaction, x = 0. In the second case, call returns false, only the side effects of that invocation are reverted and the execution continues. In this scenario, x = 2. The irregularity of how exceptions are handled affect the security of the contracts as it does not always allow developer to believe that the transfer of ether was successful. This has been fixed by introducing the transfer function that actually throws an exception in case of error but costs 2300 gas stipend just like the send function.
+                </div>
+
+                <h3>Type cast</h3>
+                <div>
+                    This vulnerability is caused by a weakness of the Solidity compiler. The Solidity compiler is supposed to be able to detect type errors and inform the developer about them. For example, a compiler is able to detect the assignment of an integer to a variable of type string and report it to the developer. However, type checking is not done in the direct call function. Looking back at Figure 1, if the programmer mistypes the interface of contract Alice, such as declaring it as type int instead of uint and there does not exist a function that respect that signature, then the call to ping actually results in a call to Alice's fallback function. In such a scenario, the compiler would not warn the user. Another issue that the compiler would not catch is if c is not the address of contract Alice.
+                    <div class="quarter-clear"></div>
+                    Below are the three different scenarios that may occur in case of type mismatch:
+                    <ul>
+                        <li>if c is not a contract address, the call returns without executing any code
+                        </li>
+                        <li>if c is the address of any contract having a function with the same signature as Alice’s ping, then that function is executed
+                        </li>
+                        <li>if c is a contract with no function matching the signature of Alice’s ping, then c’s fallback is executed
+                        </li>
+                    </ul>
+                    <div class="quarter-clear"></div>
+                    Lastly, this makes it deceive to the developers that believe that the compiler does type casting.
+                </div>
+
+                <h3>Gasless send</h3>
+                <div>
+                    Ideally, the transfer of ether should not be associated with any code execution. As discussed in the first section, the send function uses a stipend of 2300 gas which makes it enough not to only transfer Ether, but also do one small additional operation in the fallback function. To be more precise, the 2300 units of gas do not allow the execution of any instructions that alter the state of the contract. This being said, what would happen if one decided to run operations where the where the gas stipend is not enough for the execution? If send() call runs out of gas, it will not throw an error but simply return false and the gas will be already consumed and not returned. In such a case, it would be better to use the call() function and send a greater amount of gas.
+                </div>
+
+                <h3>Re-entrancy</h3>
+                <div>
+                    Re-entrancy is considered to be the most severe vulnerability in Solidity. As mentioned in the previous blog, the Solidity code is compiled on the Ethereum virtual machine and is read sequentially. This made programmers believe that when a non-recursive function is invoked, it cannot be re-entered before its termination. This is not always the case as the fallback mechanism may allow an attacker to re-enter the caller function.
+                    <div class="quarter-clear"></div>
+                    As described in the paper by Ardit Dika, "Any interaction from a contract (A) with another contract (B) and any transfer of Ether, hands over control to that contract (B). This makes it possible for B to call back into A before this interaction is completed"
+                    <div class="quarter-clear"></div>
+                    Below is an example of re-entrancy:
+                </div>
+
+                <div class="reentrancyPic blogPic"></div>
+                <div class="figure-source">Figure 2: Re-entrancy Example. Source [1]</div>
+
+                <!--                ADD wei definition -->
+                <div>
+                    The function ping in Bob is meant to send exactly 2 wei ??? to some address c. Assume that Mallory invokes the ping function. as mentioned in the first section, using the call function triggers Mallory's fallback function. In this scenario, since it is a call function, and enough gas is given then Mallory can recursively call Bob's ping function. This loop would only end when Bob runs out of ether, when an out-of-gas limit is reached or when the stack limit is reached. This technique was used in the DAO attack.
+                </div>
+
+                <h3>Keeping secrets</h3>
+                <div>
+                    Solidity fields can have have different types:
+                    <ul>
+                        <li>External</li>
+                        <li>Public</li>
+                        <li>Internal</li>
+                        <li>Private</li>
+                    </ul>
+                    As mentioned in the previous blog, one of the characteristics of the blockchain is that it is public and that all the nodes hold the same copy of the blockchain. Therefore, declaring a field as private does not guarantee its secrecy. Anyone can inspect the contents of the transaction sent to miners that get published on the blockchain.
+                </div>
+
+                <h2>Ethereum virtual machine</h2>
+                <div>
+                    Below are some vulnerabilities that are caused by the Ethereum virtual machine. The three vulnerabilities that will be discussed are, immutable bugs, ether lost in transfer and stack size limit.
+                </div>
+
+                <h3>Immutable bugs</h3>
+                <div>
+                    As mentioned in the previous blog, Ethereum smart contracts are all located on the blockchain. One of the blockchain characteristics is immutability. Once a contract is published on the blockchain, it can no longer be altered. If a bug or a vulnerability is found, then it is essentially the end of the contract. Interfaces in Solidity enable contracts to become upgradable. This has risen a lot of concern as the contract is the law and should not be altered.
+                </div>
+
+                <h3>Ether lost in transfer</h3>
+                <div>
+                    A recipient's address takes the form of 160 bits. When sending ether, one has to specify the recipient’s address. However, most addresses in Ethereum are inexistent and called orphan addresses. An orphan address is one that has no contract associated to it and no one controls their private keys. There is no way to detect whether or not an address is orphan.
+                    <div class="quarter-clear"></div>
+                    Sending ether to these addresses will result in deletion of the ether. This adds another task to programmers which is to ensure that the address provided is always correct.
+                </div>
+
+                <h3>Stack size limit</h3>
+                <div>
+                    Each time a contract invokes another contract the call stack associated with the transaction grows by one frame. The call stack is bounded to 1024 frames and when this limit is reached, a further invocation throws an exception. This vulnerability allows to induce a targeted 'call()' to fail without throwing an exception. When the return value is not properly checked, then it can lead to exploit. This issue was, however, fixed in 2016 by ensuring that any execution will run out of gas before reaching the call stack.
+                </div>
+
+                <h2>Blockchain</h2>
+                <div>
+                    The issues related to the blockchain will be described in a future blog.
+                </div>
+
+                <h2>References</h2>
+                <div class="references">
+                    <ul>
+                        <li> <a class="blog-link" target="_blank" href="https://eprint.iacr.org/2016/1007.pdf">[1] A survery of attacks on Ethereum smart contracts</a></li>
+                        <li> <a class="blog-link" target="_blank" href="https://brage.bibsys.no/xmlui/bitstream/handle/11250/2479191/18400_FULLTEXT.pdf?sequence=1">[2] Ethereum Smart Contracts: Security Vulneraiblities and Security Tools</a></li>
+                        <li> <a class="blog-link" target="_blank" href="https://ethereum.stackexchange.com/questions/6470/send-vs-call-differences-and-when-to-use-and-when-not-to-use">[3] Ethereum send() versus call()</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
