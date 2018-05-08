@@ -269,6 +269,10 @@ nav li:hover {
     color: #ffffff;
 }
 
+.begin-blog {
+    height: 55px;
+}
+
 .clear {
     clear: both;
     height: 40px;
@@ -1315,10 +1319,6 @@ hr:before {
 
     .clear {
         height: 20px;
-    }
-
-    .begin-blog {
-        height: 55px;
     }
 
     .loader-effect {
