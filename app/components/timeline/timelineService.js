@@ -166,11 +166,11 @@ angular.module('myAppTimelineService', [])
                                 code: "ECE 498A",
                                 description: "Engineering Design Project"
                                 }, {
-                                code: "FR 151",
-                                description: "Basic French 1"
+                                code: "ENVS 200",
+                                description: "Field Ecology"
                                 }, {
-                                code: "PHIL 390",
-                                description: "Critical Thinking"
+                                code: "FR 151",
+                                description: "Basic French"
                                 }
                             ],
                     }, {
