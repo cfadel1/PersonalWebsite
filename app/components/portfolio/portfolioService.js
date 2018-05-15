@@ -4,6 +4,18 @@ angular.module('myAppPortfolioService', [])
             getProjects: function () {
                 var projects = [
                     {
+                        projectId: 'ethereum1',
+                        githubUrl: 'http://cedricfadel.com/#/Ethereum_Security_1',
+                        title: 'Ethereum smart contract security vulnerabilities',
+                        description: 'Part of a research position with Professor Vijay Ganesh. Research is related to Ethereum smart contract vulnerabilities and is documented in numerous blogs under the blog section.',
+                        languages: 'Solidity, Ethereum, Ethereum Virtual Machine, Blockchain'
+			}, {
+                        projectId: 'cnn',
+                        githubUrl: 'http://cedricfadel.com/#/Cnn',
+                        title: 'Convolutional Networks',
+                        description: 'Research on convolutional neural networks for image classification. This research is documented in the blog section under Convolutional Neural Networks for image classification. In addition, a simple python script was written that trains a neural network using TensorFlow',
+                        languages: 'Python, TensorFlow Library'
+			}, {
                         projectId: 'project2',
                         githubUrl: 'https://github.com/cfadel1/TensorFlow-ImageClassifier',
                         title: 'Keylogger',

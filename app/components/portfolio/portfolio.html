@@ -6,7 +6,6 @@
     </div>
 </div>
 
-
 <!-- Icon and Body -->
 <div class="body-wrapper-indent">
     <div class="banner-icon-wrapper">
@@ -14,40 +13,8 @@
     </div>
     <!-- Icon and Body -->
     <div class="body-wrapper-indent">
-
         <div class="content-wrapper">
             <div ng-controller="PortfolioCtrl as controller" class="outer-box">
-
-                <div class="inner-box">
-                    <div class="blog-box">
-                        <div class="left-box project1">
-                            <br style="clear:both;" />
-                        </div>
-                        <div class="right-box">
-                            <div>
-                                <a target="_blank" href="https://github.com/cfadel1/TensorFlow-ImageClassifier" class="social-icon-header">
-                                    <div class="project-title">
-                                        <h2>MNIST Image Classifier</h2>
-                                        <ul class="project-link">
-                                            <li>
-                                                <i class="fa fa-github" aria-hidden="true"></i>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <span class="underline-project"></span>
-                                </a>
-                            </div>
-                            <div class="project-summary ellipsis">
-                                Wrote a Python script that trains a neural network using TensorFlow. This project was completed with the purpose of enhancing my knowledge of Machine Learning. For more information, check out my blog on <a href="#/Blog" class="blog-link">Convolutional Neural Networks</a> for image classification.
-                            </div>
-                            <div class="half-clear"></div>
-                            <p>
-                                <u class="project-languages">Implemented Using:</u> Python, TensorFlow Library
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
                 <div ng-repeat="project in projects" class="inner-box">
                     <div class="clear"></div>
                     <div class="clear"></div>
@@ -74,7 +41,7 @@
                             </div>
                             <div class="half-clear"></div>
                             <p>
-                                <u class="project-languages">Implemented Using:</u> {{project.languages}}
+                                <u class="project-languages">Technology Used:</u> {{project.languages}}
                             </p>
                         </div>
                     </div>
