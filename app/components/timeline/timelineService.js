@@ -90,8 +90,8 @@ angular.module('myAppTimelineService', [])
                     {
                         term: 'COOP6',
                         descriptions: [
-                                "- Worked under Professor Vijay Ganesh in research and development",
-                                "- Presented monthly research findings to the faculty"
+                                "- Researched Ethereum smart contract security vulnerabilities under professsor Vijay Ganesh",
+                                "- Held seminars as well as code reviews to educate the department on research findings of Soliditity, Ethereum Virtual Machine, and Blockchain vulnerabilities on smart contracts"
                             ],
                         languages: [
                                 "Smart Contracts, BlockChain, Solidity"
@@ -99,9 +99,9 @@ angular.module('myAppTimelineService', [])
                     }, {
                         term: 'COOP5',
                         descriptions: [
-                                "- Designed and implemented a Data Health Monitoring Platform for existing data pipelines",
-                                "- Built front end experience using primarily D3.js and AngularJs for tree representation of data pipelines and graph representation of the key performance indicators",
-                                "- Built backend services that interacts with data pipeline components to fetch and store data using Java Spring framework and Postgres"
+                                "- Designed and implemented a Data Health Monitoring Platform for existing data pipelines which optimized data pipeline diagnostic by 60%",
+                                "- Built front-end user interface using primarily D3.js and AngularJs to visualize data hierarchies as tree structures and graphically represented their key performance indicators",
+                                "- Built back-end services that interact with data pipeline components such as Hadoop, Kafka, Logstash, ElasticSearch, Kibana and Kangaroo to fetch and store their status using Java Spring framework and PostgreSQL"
                             ],
                         languages: [
                                 "Java, JavaScript, TypeScript, Postgres, CSS, HTML, AngularJS"
@@ -109,10 +109,9 @@ angular.module('myAppTimelineService', [])
                     }, {
                         term: 'COOP4',
                         descriptions: [
-                                "- Designed and implemented security features for a Web Portal such as the Audit Trail, Reset    Password and Login pages amongst others ",
-                                "- Enhanced web portal's performance by 60% by making Audit Trail's desgin multithreaded",
-                                "- Built end-to-end MVC features such as User Management",
-                                "- Improved the front-end performance by implementing AngularJS"
+                                "- Designed and implemented security features for a web portal such as its audit trail, the reset password page and login page amongst others using C#, SQL, JavaScript and AngularJS",
+                                "- Enhanced web portal’s performance by 60% by making audit trail’s design multithreaded",
+                                "- Built end-to-end MVC features such as user management using C#, SQL and JavaScript"
                         ],
                         languages: [
                                 'C#, ', 'SQL, ', 'JavaScript, ', 'AngularJS, ', 'HTML5, ', 'CSS3, ', 'ASP.Net MVC5'
@@ -120,8 +119,9 @@ angular.module('myAppTimelineService', [])
                     }, {
                         term: 'COOP3',
                         descriptions: [
-                                "- Implemented a web-service platform that periodically fetches information and status of a development branch and its virtual appliance and displays it on a web-page",
-                                "- Created .msi installers with WIX to accelerate the installation of web-services by 150%"
+                                "- Implemented a web-service platform that periodically fetched and displayed the status of existing development branches as well as their their virtual appliances on a webpage",
+                                "- Created .msi installers with WIX to accelerate the installation of web-services by 150%",
+                                "Fixed bugs and implemented new features on embedded software and various websites primarily using C#, SQL, HTML, CSS, KendoUI, JQuery and JavaScript"
                         ],
                         languages: [
                                 'C#, ', 'SQL, ', 'JavaScript, ', 'HTML5, ', 'CSS3, ', 'XML, ', 'WIX, ', 'ASP.Net MVC5'
