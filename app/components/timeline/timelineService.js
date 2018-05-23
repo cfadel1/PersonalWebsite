@@ -12,7 +12,7 @@ angular.module('myAppTimelineService', [])
                     }, {
                         position: 'Research Assistant',
                         date: 'Jan 2018',
-                        description: 'Research assistance on the topic of Euthereum Smart Contracts Security Vulnerabilities',
+                        description: 'Research assistance on the topic of Euthereum smart contracts security vulnerabilities',
                         termNumb: 'COOP6',
                         btnLabel: 'View Details'
                     }, {
