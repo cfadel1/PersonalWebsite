@@ -5,6 +5,18 @@ angular.module('myAppTimelineService', [])
                 var terms = [
                     {
                         position: 'Computer Engineering',
+                        date: 'Jan 2019',
+                        description: 'Second term of my fourth year in Computer Engineering at the University of Waterloo',
+                        termNumb: '4B',
+                        btnLabel: 'View Courses'
+                    }, {
+                        position: 'Cloud Software Engineering - NVIDIA',
+                        date: 'Sept 2018',
+                        description: 'Sixth internship as a Software Engineer on the Provision Manager\'s team for GeForce Now',
+                        termNumb: 'COOP7',
+                        btnLabel: 'View Courses'
+                    }, {
+                        position: 'Computer Engineering',
                         date: 'May 2018',
                         description: 'First term of my fourth year in Computer Engineering at the University of Waterloo',
                         termNumb: '4A',
@@ -88,6 +100,16 @@ angular.module('myAppTimelineService', [])
             getCoopTerms: function () {
                 var coopTerms = [
                     {
+                        term: 'COOP7',
+                        descriptions: [
+                                "- Accelerated the Provision Manager's global deployments by 400% by implementing a multithreaded Jenkins pipeline that ensures safe deployment and generates a report analysis",
+                                "- Designed and implemented integration tests between services using the NUnit framework",
+                                "- Ease process of analysing logs by automating the download from Amazon S4 and merging logs depending on user specification using Python  "
+                            ],
+                        languages: [
+                                "Python, C#, C++, AWS, Jenkins"
+                        ]
+                    }, {
                         term: 'COOP6',
                         descriptions: [
                                 "- Researched Ethereum smart contract security vulnerabilities under professsor Vijay Ganesh",
@@ -154,6 +176,26 @@ angular.module('myAppTimelineService', [])
             getStudyTerms: function () {
                 var studyTerms = [
                     {
+                        term: '4B',
+                        courses: [
+                            {
+                                code: "ECE 406",
+                                description: "Algorithm Design and Analysis"
+                                }, {
+                                code: "ECE 459",
+                                description: "Programming for Performance"
+                                }, {
+                                code: "ECE 493 T21",
+                                description: "Autonomous Vehicules"
+                                }, {
+                                code: "ECE 498B",
+                                description: "Engineering Design Project"
+                                },  {
+                                code: "HRM 200",
+                                description: "Basic Human Resrouces Management"
+                                }
+                            ],
+                    },{
                         term: '4A',
                         courses: [
                             {
