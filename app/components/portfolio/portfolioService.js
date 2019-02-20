@@ -17,13 +17,13 @@ angular.module('myAppPortfolioService', [])
                         languages: 'Python, TensorFlow Library'
 			}, {
                         projectId: 'project4',
-                        githubUrl: 'https://github.com/cfadel1/TensorFlow-ImageClassifier',
+                        githubUrl: 'https://github.com/cfadel1/Keylogger',
                         title: 'Keylogger',
                         description: 'A Console Application capable of logging all the keyboard and mouse inputs using Windows API. The logs are then sent to the user by a generated PowerShell script. All the logs emailed are encrypted. The program has also the capability of decrypting these logs.',
                         languages: 'C++, Windows API'
 			}, {
                         projectId: 'project3',
-                        githubUrl: 'https://github.com/cfadel1',
+                        githubUrl: 'https://github.com/cfadel1/Pedometer',
                         title: 'Pedometer',
                         description: 'An Android Application capable of guiding a user to a destination while correcting the user\'s wrong turns along the way. The algorithm uses a path-finding algorithm similar to Dijkstra\'s algorithm.',
                         languages: 'Java'
