@@ -75,7 +75,8 @@ header p {
 }
 
 .timeline li {
-    padding: 2em 0;
+    /*    padding: 2em 0;*/
+    margin-bottom: -15px;
 }
 
 .timeline .hexa {
@@ -258,7 +259,7 @@ blockquote cite:before {
 
 .course-description {
     display: inline-block;
-    width: 83%;
+    width: 77%;
 }
 
 .course-dash {
@@ -268,7 +269,7 @@ blockquote cite:before {
 
 .course-code {
     display: inline-block;
-    width: 13%;
+    width: 19%;
 }
 
 .modal-languages {
@@ -284,10 +285,10 @@ blockquote cite:before {
     margin: 10px 0 5px 0;
 }
 
-@media(min-width: 768px) {
+@media(min-width: 992px) {
     .timeline {
-        width: 660px;
-        margin: 0 auto;
+        width: 1210px;
+        margin: 3em auto;
     }
 
     .timeline li:after {
@@ -311,14 +312,14 @@ blockquote cite:before {
 
     .direction-l {
         position: relative;
-        width: 310px;
+        width: 585px;
         float: left;
         text-align: right;
     }
 
     .direction-r {
         position: relative;
-        width: 310px;
+        width: 585px;
         float: right;
         text-align: left;
     }
@@ -377,28 +378,11 @@ blockquote cite:before {
     }
 }
 
-@media(min-width: 992px) {
-    .timeline {
-        width: 1210px;
-        margin: 0 auto;
+@media(max-width: 992px) {
+    .timeline li {
+        padding: 2em 0;
     }
 
-    .direction-l {
-        position: relative;
-        width: 585px;
-        float: left;
-        text-align: right;
-    }
-
-    .direction-r {
-        position: relative;
-        width: 585px;
-        float: right;
-        text-align: left;
-    }
-}
-
-@media(max-width: 768px) {
     .course {
         font-size: 14px;
         width: 100%;

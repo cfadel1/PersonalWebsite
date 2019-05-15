@@ -4,95 +4,53 @@ angular.module('myAppTimelineService', [])
             getTerms: function () {
                 var terms = [
                     {
-                        position: 'Computer Engineering',
-                        date: 'Jan 2019',
-                        description: 'Second term of my fourth year in Computer Engineering at the University of Waterloo',
+                        position: 'Computer Engineering - University of Waterloo',
+                        date: 'June 2019',
+                        description: 'Graduated from the University of Waterloo with a Bachelors of Applied Sciences in Computer Engineering',
                         termNumb: '4B',
-                        btnLabel: 'View Courses'
+                        btnLabel: 'View Details'
                     }, {
                         position: 'Cloud Software Engineering - NVIDIA',
                         date: 'Sept 2018',
-                        description: 'Sixth internship as a Software Engineer on the Provision Manager\'s team for GeForce Now',
+                        description: 'Four month internship as a Software Engineer on the Provision Manager\'s team for GeForce Now at NVIDIA in Santa Clara, California.',
                         termNumb: 'COOP7',
-                        btnLabel: 'View Courses'
+                        btnLabel: 'View Details'
                     }, {
-                        position: 'Computer Engineering',
-                        date: 'May 2018',
-                        description: 'First term of my fourth year in Computer Engineering at the University of Waterloo',
-                        termNumb: '4A',
-                        btnLabel: 'View Courses'
-                    }, {
-                        position: 'Research Assistant',
+                        position: 'Research Assistant - University of Waterloo',
                         date: 'Jan 2018',
-                        description: 'Research assistance on the topic of Euthereum smart contracts security vulnerabilities',
+                        description: 'Research assistance on the topic of Euthereum smart contracts security vulnerabilities at the University of Waterloo in Waterloo, Ontario.',
                         termNumb: 'COOP6',
                         btnLabel: 'View Details'
                     }, {
-                        position: 'Computer Engineering',
-                        date: 'Jan 2018',
-                        description: 'Second term of my third year in Computer Engineering at the University of Waterloo',
-                        termNumb: '3B',
-                        btnLabel: 'View Courses'
-                    }, {
                         position: 'Software Engineer - NVIDIA',
                         date: 'Sept 2017',
-                        description: 'Fifth internship as a Software Engineer on the Data Platform Team',
+                        description: 'Four month internship as a Software Engineer on the Data Platform team at NVIDIA in Santa Clara, California.',
                         termNumb: 'COOP5',
                         btnLabel: 'More Details'
                     }, {
-                        position: 'Computer Engineering',
-                        date: 'May 2017',
-                        description: 'First term of my third year in Computer Engineering at the University of Waterloo',
-                        termNumb: '3A',
-                        btnLabel: 'View Courses'
-                    }, {
                         position: 'Full Stack Developer - BDO',
                         date: 'Jan 2017',
-                        description: 'Fourth internship as a Microsoft Full Stack Developer',
+                        description: 'Four month internship as a Microsoft Full Stack Developer at BDO Canada in Toronto, Ontario.',
                         termNumb: 'COOP4',
                         btnLabel: 'More Details'
                     }, {
-                        position: 'Computer Engineering',
-                        date: 'Sept 2016',
-                        description: 'Second term of my second year in Computer Engineering at the University of Waterloo',
-                        termNumb: '2B',
-                        btnLabel: 'View Courses'
-                    }, {
                         position: 'Software Developer - MedAvail',
                         date: 'May 2016',
-                        description: 'Third internship as a Software Developer',
+                        description: 'Four month internship as a Software Developer at a startup called MedAvail in Mississauga, Ontario.',
                         termNumb: 'COOP3',
                         btnLabel: 'More Details'
                     }, {
-                        position: 'Computer Engineering',
-                        date: 'Jan 2016',
-                        description: 'First term of my second year in Computer Engineering at the University of Waterloo',
-                        termNumb: '2A',
-                        btnLabel: 'View Courses'
-                    }, {
                         position: 'Quality Assurance - MedAvail',
                         date: 'Sept 2015',
-                        description: 'Second internship as a Quality Assurance',
+                        description: 'Four month internship as a Quality Assurance at a startup called MedAvail in Mississauga, Ontario.',
                         termNumb: 'COOP2',
                         btnLabel: 'More Details'
                     }, {
-                        position: 'Computer Engineering',
-                        date: 'May 2015',
-                        description: 'Second term of my first year in Computer Engineering at the University of Waterloo',
-                        termNumb: '1B',
-                        btnLabel: 'View Courses'
-                    }, {
                         position: 'Project Coordinator - TJX',
                         date: 'Jan 2015',
-                        description: 'First internship as a Project Coordinator for the Systems Implementation Team',
+                        description: 'Four month internship as a Project Coordinator for the Systems Implementation team at TJX Canada in Mississauga, Ontario.',
                         termNumb: 'COOP1',
                         btnLabel: 'More Details'
-                    }, {
-                        position: 'Computer Engineering',
-                        date: 'Sept 2014',
-                        description: 'First term of my first year in Computer Engineering at the University of Waterloo',
-                        termNumb: '1A',
-                        btnLabel: 'View Courses'
                     }
                 ];
                 return terms;
@@ -176,173 +134,185 @@ angular.module('myAppTimelineService', [])
             getStudyTerms: function () {
                 var studyTerms = [
                     {
-                        term: '4B',
-                        courses: [
+                        studyId: '4B',
+                        terms: [
                             {
-                                code: "ECE 406",
-                                description: "Algorithm Design and Analysis"
+                                termNumb: '4B Courses',
+                                courses: [
+                                    {
+                                        code: "ECE 406",
+                                        description: "Algorithm Design and Analysis"
+                                            }, {
+                                        code: "ECE 459",
+                                        description: "Programming for Performance"
+                                            }, {
+                                        code: "ECE 493 T21",
+                                        description: "Autonomous Vehicules"
+                                            }, {
+                                        code: "ECE 498B",
+                                        description: "Engineering Design Project"
+                                            }, {
+                                        code: "HRM 200",
+                                        description: "Basic Human Resrouces Management"
+                                            }
+                                        ],
+                                    },
+                            {
+                                termNumb: '4A Courses',
+                                courses: [
+                                    {
+                                        code: "ECE 454",
+                                        description: "Distributed Computing"
                                 }, {
-                                code: "ECE 459",
-                                description: "Programming for Performance"
+                                        code: "ECE 458",
+                                        description: "Computer Security"
                                 }, {
-                                code: "ECE 493 T21",
-                                description: "Autonomous Vehicules"
+                                        code: "ECE 498A",
+                                        description: "Engineering Design Project"
                                 }, {
-                                code: "ECE 498B",
-                                description: "Engineering Design Project"
-                                },  {
-                                code: "HRM 200",
-                                description: "Basic Human Resrouces Management"
+                                        code: "ENVS 200",
+                                        description: "Field Ecology"
+                                }, {
+                                        code: "FR 151",
+                                        description: "Basic French"
                                 }
                             ],
-                    },{
-                        term: '4A',
-                        courses: [
+                                    },
                             {
-                                code: "ECE 454",
-                                description: "Distributed Computing"
+                                termNumb: '3B Courses',
+                                courses: [
+                                    {
+                                        code: "ECE 318",
+                                        description: "Analog and Digital Communication"
                                 }, {
-                                code: "ECE 458",
-                                description: "Computer Security"
+                                        code: "ECE 356",
+                                        description: "Database Systems"
                                 }, {
-                                code: "ECE 498A",
-                                description: "Engineering Design Project"
+                                        code: "ECE 358",
+                                        description: "Computer Networks"
                                 }, {
-                                code: "ENVS 200",
-                                description: "Field Ecology"
+                                        code: "ECE 390",
+                                        description: "Engineering Design, Economics, and Impact on Society"
                                 }, {
-                                code: "FR 151",
-                                description: "Basic French"
+                                        code: "CHEM 123",
+                                        description: "Chemical Reactions, Equilibria and Kinetics"
                                 }
                             ],
-                    }, {
-                        term: '3B',
-                        courses: [
+                                    },
                             {
-                                code: "ECE 318",
-                                description: "Analog and Digital Communication"
+                                termNumb: '3A Courses',
+                                courses: [
+                                    {
+                                        code: "ECE 316",
+                                        description: "Probability Theory & Stats",
                                 }, {
-                                code: "ECE 356",
-                                description: "Database Systems"
+                                        code: "ECE 327",
+                                        description: "Digital Hardware Systems"
                                 }, {
-                                code: "ECE 358",
-                                description: "Computer Networks"
+                                        code: "ECE 351",
+                                        description: "Compilers"
                                 }, {
-                                code: "ECE 390",
-                                description: "Engineering Design, Economics, and Impact on Society"
+                                        code: "ECE 380",
+                                        description: "Analog Control Systems"
                                 }, {
-                                code: "CHEM 123",
-                                description: "Chemical Reactions, Equilibria and Kinetics"
+                                        code: "MSCI 211",
+                                        description: "Organizational Behaviour"
                                 }
                             ],
-                    }, {
-                        term: '3A',
-                        courses: [
+                                    },
                             {
-                                code: "ECE 316",
-                                description: "Probability Theory & Stats",
+                                termNumb: '2B Courses',
+                                courses: [
+                                    {
+                                        code: "ECE 205",
+                                        description: "Advanced Calculus"
                                 }, {
-                                code: "ECE 327",
-                                description: "Digital Hardware Systems"
+                                        code: "ECE 222",
+                                        description: "Digital Computers"
                                 }, {
-                                code: "ECE 351",
-                                description: "Compilers"
+                                        code: "ECE 240",
+                                        description: "Electronic Circuits 1"
                                 }, {
-                                code: "ECE 380",
-                                description: "Analog Control Systems"
+                                        code: "ECE 250",
+                                        description: "Algorithms & Data Structures"
                                 }, {
-                                code: "MSCI 211",
-                                description: "Organizational Behaviour"
+                                        code: "ECE 290",
+                                        description: "Eng Profession, Ethics, Law"
+                                }, {
+                                        code: "ECE 215",
+                                        description: "Linear Alg for Engineering"
                                 }
                             ],
-                    }, {
-                        term: '2B',
-                        courses: [
+                                    },
                             {
-                                code: "ECE 205",
-                                description: "Advanced Calculus"
+                                termNumb: '2A Courses',
+                                courses: [
+                                    {
+                                        code: "ECE 205",
+                                        description: "Advanced Calculus"
                                 }, {
-                                code: "ECE 222",
-                                description: "Digital Computers"
+                                        code: "ECE 222",
+                                        description: "Digital Computers"
                                 }, {
-                                code: "ECE 240",
-                                description: "Electronic Circuits 1"
+                                        code: "ECE 240",
+                                        description: "Electronic Circuits 1"
                                 }, {
-                                code: "ECE 250",
-                                description: "Algorithms & Data Structures"
+                                        code: "ECE 250",
+                                        description: "Algorithm & Data Structures"
                                 }, {
-                                code: "ECE 290",
-                                description: "Eng Profession, Ethics, Law"
+                                        code: "ECE 290",
+                                        description: "Eng. Profession, Ethics, Law"
                                 }, {
-                                code: "ECE 215",
-                                description: "Linear Alg for Engineering"
+                                        code: "MATH 215",
+                                        description: "Linear Algebra for Eng."
                                 }
                             ],
-                    }, {
-                        term: '2A',
-                        courses: [
+                                    },
                             {
-                                code: "ECE 205",
-                                description: "Advanced Calculus"
+                                termNumb: '1B Courses',
+                                courses: [
+                                    {
+                                        code: "ECE 103",
+                                        description: "Discrete Mathematics"
                                 }, {
-                                code: "ECE 222",
-                                description: "Digital Computers"
+                                        code: "ECE 106",
+                                        description: "Physics of Electrical Engineering 2"
                                 }, {
-                                code: "ECE 240",
-                                description: "Electronic Circuits 1"
+                                        code: "ECE 124",
+                                        description: "Digital Circuits and Systems"
                                 }, {
-                                code: "ECE 250",
-                                description: "Algorithm & Data Structures"
+                                        code: "ECE 155",
+                                        description: "Embedded Systems"
                                 }, {
-                                code: "ECE 290",
-                                description: "Eng. Profession, Ethics, Law"
-                                }, {
-                                code: "MATH 215",
-                                description: "Linear Algebra for Eng."
+                                        code: "MATH 119",
+                                        description: "Calculus 2 for Engineering"
                                 }
                             ],
-                    }, {
-                        term: '1B',
-                        courses: [
+                                    },
                             {
-                                code: "ECE 103",
-                                description: "Discrete Mathematics"
+                                termNumb: '1A Courses',
+                                courses: [
+                                    {
+                                        code: "ECE 105",
+                                        description: "Physics of Electrical Engineering"
                                 }, {
-                                code: "ECE 106",
-                                description: "Physics of Electrical Engineering 2"
+                                        code: "ECE 140",
+                                        description: "Linear Circuits"
                                 }, {
-                                code: "ECE 124",
-                                description: "Digital Circuits and Systems"
+                                        code: "ECE 150",
+                                        description: "Fundamentals of Programming"
                                 }, {
-                                code: "ECE 155",
-                                description: "Embedded Systems"
+                                        code: "MATH 117",
+                                        description: "Calculus 1 for Engineering"
                                 }, {
-                                code: "MATH 119",
-                                description: "Calculus 2 for Engineering"
+                                        code: "CHEM 102",
+                                        description: "Chemistry for Engineers"
                                 }
                             ],
-                    }, {
-                        term: '1A',
-                        courses: [
-                            {
-                                code: "ECE 105",
-                                description: "Physics of Electrical Engineering"
-                                }, {
-                                code: "ECE 140",
-                                description: "Linear Circuits"
-                                }, {
-                                code: "ECE 150",
-                                description: "Fundamentals of Programming"
-                                }, {
-                                code: "MATH 117",
-                                description: "Calculus 1 for Engineering"
-                                }, {
-                                code: "CHEM 102",
-                                description: "Chemistry for Engineers"
-                                }
-                            ],
+                                    }
+                            ]
                     }
-                ];
+                    ];
                 return studyTerms;
             }
         };

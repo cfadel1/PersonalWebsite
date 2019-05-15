@@ -608,6 +608,7 @@ figcaption {
 }
 
 .button {
+    outline: none;
     background-color: #184276;
     border-radius: 4px;
     border: none;
@@ -624,6 +625,7 @@ figcaption {
 }
 
 .button:hover {
+    outline: none;
     opacity: 1;
 }
 
@@ -653,6 +655,52 @@ figcaption {
 .button:hover span:after {
     opacity: 1;
     right: 0;
+}
+
+.loading {
+    outline: none;
+    font-size: 0;
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    border-radius: 15px;
+    padding: 0;
+    border: 3px solid #184276;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.0);
+    border-left: 3px solid rgba(255, 255, 255, 0.0);
+    background-color: transparent !important;
+    animation-name: rotateAnimation;
+    -webkit-animation-name: wk-rotateAnimation;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-delay: 0.2s;
+    -webkit-animation-delay: 0.2s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes wk-rotateAnimation {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.hide-loading {
+    display: none;
 }
 
 .status-msg {
@@ -1293,15 +1341,6 @@ hr:before {
         font-size: 14px;
     }
 
-    .validation-btn {
-        border-radius: 1px;
-        border: none;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        font-size: 14px;
-        padding: 2% 4%;
-    }
-
     .banner-icon {
         background-position-x: -25px;
         border: 2px solid rgba(255, 237, 237, 0.54);
@@ -1364,6 +1403,58 @@ hr:before {
 
     .button:hover span {
         padding-right: 15px;
+    }
+
+    .submit-btn-div {
+        min-height: 40px;
+        max-height: 40px;
+    }
+
+    .loading {
+        outline: none;
+        margin: 50%;
+        font-size: 0;
+        width: 20px;
+        height: 20px;
+        margin-top: 5px;
+        border-radius: 15px;
+        padding: 0;
+        border: 3px solid #184276;
+        border-bottom: 3px solid rgba(255, 255, 255, 0.0);
+        border-left: 3px solid rgba(255, 255, 255, 0.0);
+        background-color: transparent !important;
+        animation-name: rotateAnimation;
+        -webkit-animation-name: wk-rotateAnimation;
+        animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        animation-delay: 0.2s;
+        -webkit-animation-delay: 0.2s;
+        animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: infinite;
+    }
+
+    @keyframes rotateAnimation {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @-webkit-keyframes wk-rotateAnimation {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    .hide-loading {
+        display: none;
     }
 
     .blog-box {

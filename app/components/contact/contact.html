@@ -37,10 +37,8 @@
                     </div>
                     <input hidden type="text" name="_gotcha">
                     <input hidden name="_subject" value="Subject">
-                    <div>
+                    <div class="submit-btn-div">
                         <p type="hidden" class="status-msg"></p>
-                    </div>
-                    <div>
                         <button class="button validation-btn" type="submit"><span>Submit </span></button>
                     </div>
                 </form>
@@ -67,6 +65,8 @@
             $('.status-msg').show();
             return false;
         } else {
+            $('.status-msg').hide();
+            $(".button").addClass("loading");
             $('#formId').submit();
         }
     });
@@ -79,20 +79,23 @@
             method: 'POST',
             data: $('#formId').serialize(),
             dataType: 'json',
-            beforeSend: function() {
-                $('.status-msg').text("Sending Message");
-                $('.status-msg').css("color", "blue");
-                $('.status-msg').show();
-            },
             success: function(data) {
-                $('.status-msg').text("Message Sent");
-                $('.status-msg').css("color", "blue");
-                $('.status-msg').show();
+                setTimeout(function() {
+                    $(".button").addClass("hide-loading");
+                    $('.status-msg').text("Message Sent");
+                    $('.status-msg').css("color", "blue");
+                    $('.status-msg').show();
+
+                }, 2000);
             },
             error: function(err) {
-                $('.status-msg').text("Error sending message, Please try again");
-                $('.status-msg').css("color", "red");
-                $('.status-msg').show();
+                setTimeout(function() {
+                    $(".button").removeClass("loading");
+                    $(".button").removeClass("hide-loading");
+                    $('.status-msg').text("Error sending message, Please try again");
+                    $('.status-msg').css("color", "red");
+                    $('.status-msg').show();
+                }, 2000);
             }
         });
     });
@@ -102,4 +105,4 @@
         return re.test(email);
     }
 
-</script>
+</script> 

@@ -16,7 +16,6 @@
         <cite>Steve Jobs</cite>
     </blockquote>
 
-    <!--Terms-->
     <ul class="timeline">
         <li ng-repeat="term in terms">
             <div ng-class-even="'direction-l'" ng-class-odd="'direction-r'" ng-controller="modalCtrl as vm">
@@ -36,6 +35,7 @@
             </div>
         </li>
     </ul>
+
 
     <!-- MODALS -->
     <!-- COOP -->
@@ -59,18 +59,19 @@
     </modal>
 
     <!-- University -->
-    <modal ng-repeat="studyTerm in studyTerms" class="{{studyTerm.term}}" id="{{studyTerm.term}}">
+    <modal ng-repeat="studyTerm in studyTerms" class="{{studyTerm.studyId}}" id="{{studyTerm.studyId}}">
         <div class="modal">
-            <div class="modal-body detailview-modal-body" init="btnId='{{studyTerm.term}}';">
-                <button data-ng-attr-id="{{studyTerm.term}}" ng-click="vm.closeModal('{{studyTerm.term}}');">x</button>
+            <div class="modal-body detailview-modal-body" init="btnId='{{studyTerm.studyId}}';">
+                <button data-ng-attr-id="{{studyTerm.studyId}}" ng-click="vm.closeModal('{{studyTerm.studyId}}');">x</button>
                 <div class="detailedView">
-                    <div class="modal-title">Courses</div>
-                    <div class="modal-courses">
-                        <div class="course">
-                            <div ng-repeat="courses in studyTerm.courses" class="course">
-                                <div class="course-code">{{courses.code}}</div>
-                                <div class="course-dash">-</div>
-                                <div class="course-description">{{courses.description}}</div>
+                    <div ng-repeat="term in studyTerm.terms" class="modal-title">{{term.termNumb}}
+                        <div class="modal-courses">
+                            <div class="course">
+                                <div ng-repeat="courses in term.courses" class="course">
+                                    <div class="course-code">{{courses.code}}</div>
+                                    <div class="course-dash">-</div>
+                                    <div class="course-description">{{courses.description}}</div>
+                                </div>
                             </div>
                         </div>
                     </div>
