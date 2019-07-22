@@ -80,4 +80,17 @@
         </div>
         <div class="modal-background"></div>
     </modal>
+
+    <!-- Certificates -->
+    <modal ng-repeat="certificate in certificates" class="{{certificate.certificateId}}" id="{{certificate.certificateId}}">
+        <div class="modal">
+            <div class="modal-body detailview-modal-body" init="btnId='{{certificate.certificateId}}';">
+                <button data-ng-attr-id="{{certificate.certificateId}}" ng-click="vm.closeModal('{{certificate.certificateId}}');">x</button>
+                <div class="detailedView">
+                    <div class="{{certificate.certificatePic}}"></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-background"></div>
+    </modal>
 </div>

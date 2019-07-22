@@ -4,6 +4,12 @@ angular.module('myAppTimelineService', [])
             getTerms: function () {
                 var terms = [
                     {
+                        position: 'AWS Certified Cloud Practitioner',
+                        date: 'July 2019',
+                        description: 'Succesfully completed the requirements and passed the exam for the AWS Certified Cloud Practitioner.',
+                        termNumb: 'AWSCCP',
+                        btnLabel: 'View Certificate'
+                    }, {
                         position: 'Computer Engineering - University of Waterloo',
                         date: 'June 2019',
                         description: 'Graduated from the University of Waterloo with a Bachelors of Applied Sciences in Computer Engineering',
@@ -314,6 +320,15 @@ angular.module('myAppTimelineService', [])
                     }
                     ];
                 return studyTerms;
+            },
+            getCertificates: function () {
+                var certificates = [
+                    {
+                        certificateId: 'AWSCCP',
+                        certificatePic: 'AWSCertification'
+                    }
+                ];
+                return certificates;
             }
         };
     });

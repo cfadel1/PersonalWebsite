@@ -192,7 +192,7 @@ a:hover {
     color: #184276;
     display: block;
     font-weight: bold;
-    letter-spacing: 7px;
+    letter-spacing: 5px;
     margin-bottom: 8px;
     padding: 1.25% 0 0 0;
     text-align: -webkit-center;
@@ -468,15 +468,6 @@ figcaption {
 }
 
 .project1 {
-    background-image: url(../img/caeser_cipher.jpg);
-    background-position: 50% 35%;
-    background-repeat: no-repeat;
-    background-size: 70% 90%;
-    height: 220px;
-    position: relative;
-}
-
-.project2 {
     background-image: url(../img/stocks.jpg);
     background-position: 50% 35%;
     background-repeat: no-repeat;
@@ -485,16 +476,7 @@ figcaption {
     position: relative;
 }
 
-.project3 {
-    background-image: url(../img/Pedometer.png);
-    background-position: 50% 55%;
-    background-repeat: no-repeat;
-    background-size: 65% 65%;
-    height: 220px;
-    position: relative;
-}
-
-.project4 {
+.project2 {
     background-image: url(../img/Keylogger.png);
     background-position: 50% 60%;
     background-repeat: no-repeat;
@@ -503,7 +485,7 @@ figcaption {
     position: relative;
 }
 
-.project5 {
+.project3 {
     background-image: url(../img/cnn2.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -511,6 +493,26 @@ figcaption {
     height: 220px;
     position: relative;
 }
+
+.project4 {
+    background-image: url(../img/Owl.png);
+    background-position: 50% 55%;
+    background-repeat: no-repeat;
+    background-size: 80% 85%;
+    height: 220px;
+    position: relative;
+}
+
+.project5 {
+    background-image: url(../img/AWSCloudPractitionerBadge.png);
+    background-position: 50% 35%;
+    background-repeat: no-repeat;
+    background-size: 80% 85%;
+    height: 220px;
+    position: relative;
+}
+
+
 
 .project6 {
     background-image: url(../img/ethereum2.jpg);
@@ -521,11 +523,20 @@ figcaption {
     position: relative;
 }
 
+.AWSCertification {
+    background-image: url(../img/AWSCloudPractitioner.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 70% 100%;
+    height: 324px;
+    position: relative;
+}
+
 .cnn {
     background-image: url(../img/blog1.jpg);
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-size: 100% 90%;
+    background-size: 70% 80%;
     height: 220px;
     position: relative;
 }
@@ -534,7 +545,7 @@ figcaption {
     background-image: url(../img/ethereum.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    background-size: 100% 90%;
+    background-size: 70% 80%;
     height: 220px;
     position: relative;
 }
@@ -954,7 +965,7 @@ hr:before {
     -webkit-box-shadow: 2px 2px 11px 4px rgba(37, 37, 37, 0.35);
     box-shadow: 2px 2px 11px 4px rgba(37, 37, 37, 0.35);
     display: block;
-    height: 225px;
+    height: 235px;
     padding: 20px;
     width: 100%;
 }
@@ -1005,7 +1016,7 @@ hr:before {
 
 .project-summary {
     font-size: 0.9em;
-    max-height: 110px;
+    /*    max-height: 110px;*/
     /*    min-height: 88px;*/
     overflow: auto;
 }
@@ -1065,14 +1076,14 @@ hr:before {
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 6;
+    /*    -webkit-line-clamp: 6;*/
 }
 
 .project-ellipsis {
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
+    /*    -webkit-line-clamp: 4;*/
 }
 
 .references {
@@ -1319,6 +1330,10 @@ hr:before {
         width: 100%;
     }
 
+    .AWSCertification {
+        background-size: 100% 80%;
+    }
+
     .project p,
     .button {
         font-size: 14px;
@@ -1506,17 +1521,12 @@ hr:before {
     }
 
     .project4 {
-        background-size: 55% 80%;
+        background-size: 50% 90%;
         height: 150px;
     }
 
     .project5 {
-        background-size: 80% 100%;
-        height: 150px;
-    }
-
-    .project6 {
-        background-size: 80% 100%;
+        background-size: 50% 90%;
         height: 150px;
     }
 
@@ -1614,6 +1624,10 @@ hr:before {
 
     .description {
         margin-top: 0;
+    }
+
+    .AWSCertification {
+        background-size: 100% 70%;
     }
 
     .underline {

@@ -4,42 +4,26 @@ angular.module('myAppPortfolioService', [])
             getProjects: function () {
                 var projects = [
                     {
-                        projectId: 'project6',
-                        githubUrl: 'http://cedricfadel.com/#/Ethereum_Security_1',
-                        title: 'Ethereum smart contract security vulnerabilities',
-                        description: 'Part of a research position under Professor Vijay Ganesh. Research related to Ethereum smart contract vulnerabilities and documented in numerous blogs under the blog section.',
-                        languages: 'Solidity, Ethereum, Ethereum Virtual Machine, Blockchain'
-			}, {
                         projectId: 'project5',
-                        githubUrl: 'http://cedricfadel.com/#/Cnn',
-                        title: 'Convolutional Networks',
-                        description: 'Research on convolutional neural networks for image classification. This research is documented in the blog section under Convolutional Neural Networks for image classification. In addition, a simple python script was written that trains a neural network for image classification using TensorFlow',
-                        languages: 'Python, TensorFlow Library'
+                        title: 'AWS Certified Cloud Practitioner',
+                        description: 'This certification provides individuals in a larger variety of cloud and technology roles with a way to validate their AWS Cloud knowledge and enhance their professional credibility. This exam covers four domains, including cloud concepts, security, technology, and billing and pricing.',
 			}, {
                         projectId: 'project4',
-                        githubUrl: 'https://github.com/cfadel1/Keylogger',
-                        title: 'Keylogger',
-                        description: 'A Console Application capable of logging all the keyboard and mouse inputs using Windows API. The logs are then sent to the user by a generated PowerShell script. All the logs emailed are encrypted. The program has also the capability of decrypting these logs.',
-                        languages: 'C++, Windows API'
+                        title: 'Owl - Text to Braille',
+                        description: 'Owl is an accessible system that allows visually impaired people to read printed and electronic text. It uses an Android mobile application to which text can be supplied either from a digital format or a photograph. The text is discerned using image processing and then via Bluetooth, displayed on a portable refreshable braille cell. This project was created as our fourth-year design project and received an Award for Most Potential Futuristic Application.'
 			}, {
                         projectId: 'project3',
-                        githubUrl: 'https://github.com/cfadel1/Pedometer',
-                        title: 'Pedometer',
-                        description: 'An Android Application capable of guiding a user to a destination while correcting the user\'s wrong turns along the way. The algorithm uses a path-finding algorithm similar to Dijkstra\'s algorithm.',
-                        languages: 'Java'
-    			}, {
+                        title: 'Machine Learning',
+                        description: 'Completed a course in Autonomous vehicles where we developed a trajectory planner that can handle highway driving while surrounded by dynamic obstacles moving at various speeds. Researched on convolutional neural networks for image classification. This research is documented in the blog section under Convolutional Neural Networks for image classification. A simple python script was also written that trains a neural network for image classification using TensorFlow.'
+            }, {
                         projectId: 'project2',
-                        githubUrl: 'https://github.com/cfadel1/Stocks_To_Date',
-                        title: 'Stocks to Date',
-                        description: 'Dynamic information interface windows application that fetches the current price in Canadian Dollars of currencies such as Gold, US Dollar and European Euro.',
-                        languages: 'C#, Yahoo Finance, WinForms'
-    			}, {
+                        title: 'Security',
+                        description: 'Completed numerous courses in security including Computer security at the University of Waterloo, Cryptography I on Coursera and Ethical Hacking on Udemy. Also, designed a console application Keylogger capable of logging all the keyboard and mouse inputs using Windows API. The logs are then sent to the user by a generated PowerShell script. All the logs emailed are encrypted. Many more projects were developed including Timing Attack on Passwords, Vigenère Cipher and Caesar Cipher.'
+			}, {
                         projectId: 'project1',
-                        githubUrl: 'https://github.com/cfadel1/Caesar_Cipher',
-                        title: 'Caeser Cipher',
-                        description: 'Windows Application that encodes and decodes messages securily using Caesar Cipher.',
-                        languages: 'C#, WinForms'
-    			}
+                        title: 'Finance',
+                        description: 'Implemented an Arbitrage python script that exploits the discrepancies in currency exchange rates by transforming one unit of currency into more than one unit of the same currency. Also, designed a Dynamic information interface windows application called Stock to Date, that fetches the current price in Canadian Dollars of currencies such as Gold, US Dollar and European Euro.'
+			}
 			];
                 return projects;
             }
