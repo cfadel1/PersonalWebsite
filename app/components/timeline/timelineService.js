@@ -4,6 +4,16 @@ angular.module('myAppTimelineService', [])
             getTerms: function () {
                 var terms = [
                     {
+                        position: 'Senior Software Engineer - Qualcomm',
+                        date: 'Novermber 2021',
+                        description: 'Full time position as a Senior Cloud Software Engineer.'
+                    },
+                    {
+                        position: 'Software Engineer - Qualcomm',
+                        date: 'Novermber 2019',
+                        description: 'Full time position as a Cloud Software Engineer.'
+                    },
+                    {
                         position: 'AWS Certified Cloud Practitioner',
                         date: 'July 2019',
                         description: 'Succesfully completed the requirements and passed the exam for the AWS Certified Cloud Practitioner.',
