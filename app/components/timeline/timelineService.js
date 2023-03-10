@@ -5,7 +5,7 @@ angular.module('myAppTimelineService', [])
                 var terms = [
                     {
                         position: 'Software Engineer - Qualcomm',
-                        date: 'Novermber 2019',
+                        date: 'November 2019',
                         description: 'Full time position as a Cloud Software Engineer.'
                     },
                     {
